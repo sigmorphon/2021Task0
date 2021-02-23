@@ -37,7 +37,7 @@ The training data has been converted into phonemes and is composed of <lemma, in
 The evaluation will be conducted on a new set of wug word forms.
 Wugs were generated in each language so as to cover a diverse subset of the language’s phonotactic space.
 The steps to generate these wugs were:
-1. Transduce Unimorph’s word lists into IPA.
+1. Transduce Unimorph’s word lists into IPA, filtering out any word whose 'concept' has a zipf frequency of 3 or lower using the wordfreq package(https://doi.org/10.5281/zenodo.1443582)
 2. Choose a tagset in the given language that is likely to be irregular, e.g. V;PST in English or N;ACC;PL for German.
 3. Train an LSTM on each language, conditioning it on the inflection tag.
 4. Sample new wug lemmas from the LSTM, removing already existing word forms.
