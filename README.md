@@ -1,6 +1,6 @@
 # 2021Task0: SIGMORPHON–UniMorph Shared Task 0: Generalization in Morphological Inflection Generation
 
-SIGMORPHON’s sixth installment of its inflection generation shared task focuses two aspects: (a) generalization across typologically diverse languages;  (b) cognitive plausibility of morphological inflection systems.
+SIGMORPHON’s sixth installment of its inflection generation shared task focuses on two aspects: (a) generalization across typologically diverse languages;  (b) cognitive plausibility of morphological inflection systems.
 
 ## Shared Task Description
 
