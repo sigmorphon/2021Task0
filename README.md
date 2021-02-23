@@ -3,6 +3,7 @@
 SIGMORPHON’s sixth installment of its inflection generation shared task focuses on two aspects: (a) generalization across typologically diverse languages;  (b) cognitive plausibility of morphological inflection systems.
 
 Please join our [Google Group](https://groups.google.com/g/sigmorphon2021-sharedtask0) to stay up to date.
+
 [Register for the task!](https://forms.gle/tu4tX648F9kA9eps7)
 
 ## Shared Task Description
