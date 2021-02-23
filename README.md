@@ -48,8 +48,8 @@ We then presented inflections to a group of native speakers to get plausibility 
 
 **Stage 1: Development Phase**
 * February TBA, 2021: Training and development splits for development languages released; we invite participants to report errors.
-* February TBA, 2020: Neural and non-neural baselines for development languages released.
-* March TBA, 2020: Development language data are frozen.
+* February TBA, 2021: Neural and non-neural baselines for development languages released.
+* March TBA, 2021: Development language data are frozen.
 
 **Stage 2: Generalization Phase**
 * April TBA, 2021: Training and development splits for surprise languages released.
