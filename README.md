@@ -2,6 +2,9 @@
 
 SIGMORPHON’s sixth installment of its inflection generation shared task focuses on two aspects: (a) generalization across typologically diverse languages;  (b) cognitive plausibility of morphological inflection systems.
 
+Please join our [Google Group](https://groups.google.com/g/sigmorphon2021-sharedtask0) to stay up to date.
+[Register for the task!](https://forms.gle/tu4tX648F9kA9eps7)
+
 ## Shared Task Description
 
 In this shared task, participants will design a model that learns to generate morphological inflections from a lemma and a set of morphosyntactic features of the target form. Each language in the task has its own training, development, and test splits. Training and development splits contain triples, each consisting of a lemma, a target form, and a set of morphological features, provided in the UniMorph format (the “Data” section below provides an example of input format). Test splits only provide lemmas and morphological tags: your model will need to predict the missing target form.
