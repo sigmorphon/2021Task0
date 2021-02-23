@@ -45,6 +45,7 @@ We then presented inflections to a group of native speakers to get plausibility 
 
 
 ## Timeline
+(Estimated Dates)
 
 **Stage 1: Development Phase**
 * February TBA, 2021: Training and development splits for development languages released; we invite participants to report errors.
@@ -57,12 +58,12 @@ We then presented inflections to a group of native speakers to get plausibility 
 
 **Stage 3: Evaluation Phase**
 * April TBA, 2021: Test splits for all languages (both development and surprise) released.
-* May TBA, 2021: Participants submit test predictions on all languages.
+* May 1, 2021: Participants submit test predictions on all languages.
 
 
 **Stage 4: Write-up Phase**
-* May TBA, 2021: Participants’ system description papers due.
-* May TBA, 2021: Participants’ system description papers camera ready due.
+* May 8, 2021: Participants’ system description papers due.
+* May 15, 2021: Participants’ system description papers camera ready due.
 
 
 ## Data
