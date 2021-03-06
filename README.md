@@ -132,8 +132,8 @@ Vaswani et al. [“Attention is All You Need.”](https://papers.nips.cc/paper/7
 
 
 
-### Part 2: Are We There Yet?[^1] A Shared Task on Cognitively Plausible Morphological Inflection
-[^1]: Our title is inspired (i.e. taken from) a related paper by [Corkery et al. (2019)](https://arxiv.org/abs/1906.01280).
+### Part 2: Are We There Yet?[^bignote] A Shared Task on Cognitively Plausible Morphological Inflection
+[^bignote]: Our title is inspired (i.e. taken from) a related paper by [Corkery et al. (2019)](https://arxiv.org/abs/1906.01280).
 
 #### Task Description
 An open question in the use of neural networks for the study of language is to what degree they resemble human-like language production. In the realm of morphology, this question goes back 40 years to the infamous past-tense debate of the 1980s where one camp argued humans use rule-based mechanisms and another argued that humans inflect words with a process closer to neural networks. See Gary Marcus’ book [The Algebraic Mind](https://mitpress.mit.edu/books/algebraic-mind) for an overview or several recent papers in the ACL community on the topic, e.g. [Kirov and Cotterell (2019)](https://arxiv.org/abs/1807.04783), [Corkery et al. (2019)](https://arxiv.org/abs/1906.01280) and [McCurdy et al. (2020)](https://www.aclweb.org/anthology/2020.acl-main.159/). 
