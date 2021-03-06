@@ -194,7 +194,7 @@ fink  finked  V;PST   3.2   -0.87
 fink  fank    V;PST   4.1   -0.92
 fink  funk    V;PST   1.5   -6.21
 ````
-where the fifth column is the log-probability under the partcipant's model. The micro-correlation here is ρ=0.5. These per-paradigm micro-correlations would then be arithmetically averaged to produce the final macro-average. The organizers will release and evaluation script for system evaluation along with the development data, which is the first data release where there are human judgements in the TSV. 
+where the fifth column is the log-probability under the participant's model. The micro-correlation here is ρ=0.5. These per-paradigm micro-correlations would then be arithmetically averaged to produce the final macro-average. The organizers will release and evaluation script for system evaluation along with the development data, which is the first data release where there are human judgements in the TSV. 
 
 
 ### Organizers
