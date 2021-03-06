@@ -187,7 +187,7 @@ where the fourth column is a native-speaker rating on a [Likert scale](https://e
 The task will be evaluated in the following manner. Having trained a model on the training data, the participants are asked to provide model scores for each inflection of the novel word. For instance, if the model is probabilistic (which is not a requirement!), the participants could provide the negative log-probability of each inflection under their model. To use the example given above, the particpants could provide -log(finked | fink, V;V.PTCP;PRS), -log(fank | fink, V;V.PTCP;PRS) and  -log(funk | fink, V;V.PTCP;PRS). 
 For each wug lemma, e.g. "fink", a micro-correlation is computed using ([Spearman's ρ](https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient)) between the human judgements and the provided model scores. Then, a macro-average is computed by arithmetically averaging the micro-correlations. Systems will be ranked by the final macro-average. 
 
-The organizers will release and evaluation script for system evaluation along with the development data, which is the first data release that has human c. 
+The organizers will release and evaluation script for system evaluation along with the development data, which is the first data release where there are human judgements in the TSV. 
 
 
 ### Organizers
