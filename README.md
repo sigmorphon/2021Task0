@@ -1,4 +1,4 @@
-# SIGMORPHON–UniMorph Shared Task on Generalization in Morphological Inflection Generation
+# Task0: SIGMORPHON–UniMorph Shared Task on Generalization in Morphological Inflection Generation
 
 SIGMORPHON’s sixth installment of its inflection generation shared task focuses on two aspects: 
 
@@ -7,7 +7,7 @@ SIGMORPHON’s sixth installment of its inflection generation shared task focuse
 
 Please join our [Google Group](https://groups.google.com/forum/#!forum/sigmorphon2021-sharedtask0/join) to stay up to date.
 
-Sign up here to [register for the task!](https://forms.gle/tu4tX648F9kA9eps7)
+[Register for the task!](https://forms.gle/tu4tX648F9kA9eps7)
 
 
 ## Part 1: Generalization across Languages
@@ -133,6 +133,7 @@ Vaswani et al. [“Attention is All You Need.”](https://papers.nips.cc/paper/7
 
 
 ### Part 2: Are We There Yet?[^1] A Shared Task on Cognitively Plausible Morphological Inflection
+[^1]: Our title is inspired (i.e. taken from) a related paper by [Corkery et al. (2019)](https://arxiv.org/abs/1906.01280).
 
 #### Task Description
 An open question in the use of neural networks for the study of language is to what degree they resemble human-like language production. In the realm of morphology, this question goes back 40 years to the infamous past-tense debate of the 1980s where one camp argued humans use rule-based mechanisms and another argued that humans inflect words with a process closer to neural networks. See Gary Marcus’ book [The Algebraic Mind](https://mitpress.mit.edu/books/algebraic-mind) for an overview or several recent papers in the ACL community on the topic, e.g. [Kirov and Cotterell (2019)](https://arxiv.org/abs/1807.04783), [Corkery et al. (2019)](https://arxiv.org/abs/1906.01280) and [McCurdy et al. (2020)](https://www.aclweb.org/anthology/2020.acl-main.159/). 
@@ -148,7 +149,7 @@ This shared task adopts the experimental paradigm introduced by [Albright and Ha
 
 In many cases, there is arguably more than one “correct” way to inflect these verbs according to English grammar because they are unattested. For instance, who is to say that the past tense of “fink” should be “finked” and not “fank”. For that reason, we have elicited human judgements (on [Amazon’s Mechanical Turk](https://www.mturk.com/) that tell native speakers’ preferences towards specific past tense inflections. The candidate set of potential inflections were generated through a linguist-in-the-loop procedure that made use of the state-of-the-art neural inflector from [Wu et al. (2021)](https://arxiv.org/abs/2005.10213). 
 
-#### Timeline for Part 2
+#### Timeline
 
 * February 25th, 2021: Training data for English, German, Portuguese and Russian are released. In contrast to previous year’s shared tasks, the data are in IPA. We invite participants to report errors.
 * March 8th, 2021: Neural and non-neural baselines for development languages released.
@@ -169,7 +170,7 @@ The training data are attested inflections in four languages (English, German, P
 </div>
 
 
-In contrast to the example above, the words are encoded in the [International Phonetic Alphabet (IPA)](https://en.wikipedia.org/wiki/International_Phonetic_Alphabet#:~:text=The%20International%20Phonetic%20Alphabet%20(IPA,speech%20sounds%20in%20written%20form.) not in the standard orthography for the given language. 
+In contrast to the example above, the words are encoded in the [International Phonetic Alphabet (IPA)](https://en.wikipedia.org/wiki/International_Phonetic_Alphabet) not in the standard orthography for the given language. 
 
 The **development** and **test data** are in a different format. They are quadruples 
 
@@ -190,7 +191,7 @@ For each wug lemma a micro-correlation is computed ([Spearman's ρ](https://en.w
 
 
 
-### Organizers
+## Organizers
 
 * Tiago Pimentel (University of Cambridge) 
 * Brian Leonard (Brian Leonard Consulting)
@@ -201,7 +202,7 @@ For each wug lemma a micro-correlation is computed ([Spearman's ρ](https://en.w
 * Ekaterina Vylomova (University of Melbourne)
 * Ben Ambridge (University of Liverpool)
 
-[^1]: Our title is inspired (i.e. taken from) a related paper by [Corkery et al. (2019)](https://arxiv.org/abs/1906.01280).
+
 
 
 
