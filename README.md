@@ -184,10 +184,17 @@ fink  funk    V;PST   1.5
 
 where the fourth column is a native-speaker rating on a [Likert scale](https://en.wikipedia.org/wiki/Likert_scale). As stated above, these rankings were given by native speakers on Amazon’s Mechanical Turk. 
 
-The task will be evaluated in the following manner. Having trained a model on the training data, the participants are asked to provide model scores for each inflection of the novel word. For instance, if the model is probabilistic (which is not a requirement!), the participants could provide the negative log-probability of each inflection under their model. To use the example given above, the particpants could provide -log(finked | fink, V;V.PTCP;PRS), -log(fank | fink, V;V.PTCP;PRS) and  -log(funk | fink, V;V.PTCP;PRS). 
+The task will be evaluated in the following manner. Having trained a model on the training data, the participants are asked to provide model scores for each inflection of the novel word. For instance, if the model is probabilistic (which is not a requirement!), the participants could provide the log-probability of each inflection under their model. To use the example given above, the particpants could provide log(finked | fink, V;V.PTCP;PRS), log(fank | fink, V;V.PTCP;PRS) and  log(funk | fink, V;V.PTCP;PRS). 
 For each wug lemma, e.g. "fink", a micro-correlation is computed using ([Spearman's ρ](https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient)) between the human judgements and the provided model scores. Then, a macro-average is computed by arithmetically averaging the micro-correlations. Systems will be ranked by the final macro-average. 
 
-The organizers will release and evaluation script for system evaluation along with the development data, which is the first data release where there are human judgements in the TSV. 
+As an evaluation example, consider the following hypothetical submitted system output:
+
+````
+fink  finked  V;PST   3.2   -0.87
+fink  fank    V;PST   4.1   -0.92
+fink  funk    V;PST   1.5   -6.21
+````
+where the fifth column is the log-probability under the partcipant's model. The micro-correlation here is ρ=0.5. These per-paradigm micro-correlations would then be arithmetically averaged to produce the final macro-average. The organizers will release and evaluation script for system evaluation along with the development data, which is the first data release where there are human judgements in the TSV. 
 
 
 ### Organizers
