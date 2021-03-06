@@ -157,7 +157,7 @@ In many cases, there is arguably more than one “correct” way to inflect thes
 * ***June 1th, 2021***: Users submit their system output.
 * ***June 7th, 2021***: Users submit their system description paper. 
 
-### Data
+### Data and Evaluation
 
 The training data are attested inflections in four languages (English, German, Portuguese and Russian) in. You may download them [here](https://github.com/sigmorphon/2021Task0/tree/main/part2). The data are in the standard UniMorph triple file format:
 
@@ -181,9 +181,7 @@ fink  funk    V;PST   1.5
 
 where the fourth column is a native-speaker rating on a [Likert scale](https://en.wikipedia.org/wiki/Likert_scale). As stated above, these rankings were given by native speakers on Amazon’s Mechanical Turk. 
 
-### Evaluation
-
-The task is evaluated in the following manner. Having trained a model on the training data, the participants are asked to provide scores for each inflection of the novel word. For instance, if the model is probabilistic (which is not a requirement!), the participants are asked to provide -log(finking | fink, V;V.PTCP;PRS) and -log(fank | fink, V;V.PTCP;PRS) for the examples above.
+The task will be evaluated in the following manner. Having trained a model on the training data, the participants are asked to provide scores for each inflection of the novel word. For instance, if the model is probabilistic (which is not a requirement!), the participants are asked to provide -log(finking | fink, V;V.PTCP;PRS) and -log(fank | fink, V;V.PTCP;PRS) for the examples above.
 For each wug lemma a micro-correlation is computed ([Spearman's ρ](https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient)). Then, a macro-average is computed by averaging the micro-correlations. Systems will be ranked by the final macro-average. A script will be provided for system evaluation. 
 
 ### Organizers
