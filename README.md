@@ -159,7 +159,7 @@ In many cases, there is arguably more than one “correct” way to inflect thes
 
 ### Data
 
-The training data are attested inflections in four languages (English, German, Portuguese and Russian) in. You may download them [here](https://github.com/sigmorphon/2021Task0/tree/main/part2). The data are in the standard UniMorph triple file format:
+The training data are attested inflections in four languages (English, German, Portuguese and Russian) in. You may download them [here](https://github.com/sigmorphon/2021Task0/tree/main/part2). The data are in the standard UniMorph triple TSV file format [Kirov et al. 2018](https://arxiv.org/abs/1810.11101):
 
 
 <div class="language-plaintext highlighter-rouge">
