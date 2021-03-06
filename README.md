@@ -48,6 +48,8 @@ In the Evaluation Phase, the participants’ models will be evaluated on held-ou
 |Central Kurdish (Sorani) |Indo-European | ckb | https://github.com/unimorph/ckb| Ali Salehi | 
 | Southern Kurdish (Kurdiy Xwarîn) |Indo-European | sdh | https://github.com/unimorph/sdh | Ali Salehi | 
 | Polish | Indo-European | pol | https://github.com/unimorph/pol | Witold Kieraś, Marcin Wolinski | 
+| Russian | Indo-European | rus | https://github.com/unimorph/rus | Wiktionary | 
+| Czech | Indo-European | ces | https://github.com/unimorph/ces | Wiktionary| 
 | Braj | Indo-European | bra | https://github.com/unimorph/bra |Ritesh Kumar | 
 | Magahi | Indo-European | mag | https://github.com/unimorph/mag | Ritesh Kumar | 
 | Indonesian | Austronesian| ind | https://github.com/unimorph/ind   | Clara Vania | 
@@ -55,6 +57,8 @@ In the Evaluation Phase, the participants’ models will be evaluated on held-ou
 | Eibela | Trans–New Guinea | ail | https://github.com/unimorph/ail | Grant Aiton |
 | Veps | Uralic | vep | https://github.com/unimorph/vep | Andrew and Natalia Krizhanovsky | 
 | Karelian | Uralic | krl | https://github.com/unimorph/krl | Andrew and Natalia Krizhanovsky | 
+| Ludic | Uralic | lud | https://github.com/unimorph/lud | Andrew and Natalia Krizhanovsky | 
+| Livvi | Uralic | olo | https://github.com/unimorph/olo | Andrew and Natalia Krizhanovsky | 
 
 Organizers: Tiago Pimentel, Brian Leonard, Eleanor Chodroff,  Maria Ryskina, Sabrina Mielke, Garrett Nicolai, Yustinus Ghanggo Ate, Francis Tyers, Edoardo M. Ponti, Niklas Stoehr, Ritesh Kumar, Kairit Sirts, Zoey Liu, Mans Hulden, David Yarowsky, Ryan Cotterell, Ekaterina Vylomova, Ben Ambridge
 
