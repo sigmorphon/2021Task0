@@ -13,7 +13,7 @@ Please join our [Google Group](https://groups.google.com/forum/#!forum/sigmorpho
 ## Part 1: Generalization Across Typologically Diverse Languages
 
 
-### Task Description
+### Task Summary
 
 
 In this shared task, participants will design a model that learns to generate morphological inflections from a lemma and a set of morphosyntactic features of the target form. Each language in the task has its own training, development, and test splits. Training and development splits contain triples, each consisting of a lemma, a target form, and a set of morphological features, provided in the UniMorph format (the “Data” section below provides an example of input format). Test splits only provide lemmas and morphological tags: your model will need to predict the missing target form.
@@ -23,7 +23,7 @@ The model should be general enough to work for natural languages of any typologi
 The task will be divided in two parts, the first forcuses on the inflection models' generalization across typologically diverse languages, while the second focuses on how human-like their generalization is (i.e. how cognitively plausible their outputs are).
 
 
-#### Overview
+### Task Details
 This task will proceed in three phases: a Development Phase, a Generalization Phase, and an Evaluation Phase. As the task progresses, more data and more languages will be released.
 
 In the Development Phase, we will provide training and development splits that should be used to *develop* your system.
