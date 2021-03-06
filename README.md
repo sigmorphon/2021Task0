@@ -6,7 +6,10 @@ Please join our [Google Group](https://groups.google.com/forum/#!forum/sigmorpho
 
 [Register for the task!](https://forms.gle/tu4tX648F9kA9eps7)
 
-## Shared Task Description
+## Part 1: Generalization across Languages
+
+
+### Task Description
 
 In this shared task, participants will design a model that learns to generate morphological inflections from a lemma and a set of morphosyntactic features of the target form. Each language in the task has its own training, development, and test splits. Training and development splits contain triples, each consisting of a lemma, a target form, and a set of morphological features, provided in the UniMorph format (the “Data” section below provides an example of input format). Test splits only provide lemmas and morphological tags: your model will need to predict the missing target form.
 
@@ -14,7 +17,6 @@ The model should be general enough to work for natural languages of any typologi
 
 The task will be divided in two parts, the first forcuses on the inflection models' generalization across typologically diverse languages, while the second focuses on how human-like their generalization is (i.e. how cognitively plausible their outputs are).
 
-### Part 1: Generalization across Languages
 
 This task will proceed in three phases: a Development Phase, a Generalization Phase, and an Evaluation Phase. As the task progresses, more data and more languages will be released.
 
@@ -65,30 +67,7 @@ Organizers: Tiago Pimentel, Brian Leonard, Eleanor Chodroff,  Maria Ryskina, Sab
 Annotators: Salam Khalifa, Nizar Habash, Charbel El-Khaissi, Omer Goldman, Michael Gasser, William Lane, Matt Coler, Arturo Oncevay, Jaime Rafael Montoya Samame, Gema Celeste Silva Villegas, Zoey Liu, Richard J. Hatcher, Emily Prud'hommeaux, Maria Ryskina, Karina Mischenkova, Elena Klyachko, Ali Salehi, Andrew and Natalia Krizhanovsky, Ritesh Kumar, Clara Vania, Yustinus Ghanggo Ate, Witold Kieraś, Marcin Wolinski, Totok Suhardijanto, Zahroh Nuriah, Mohit Raj, Shyam Ratan
 
 
-
-### Part 2: Human-like Generalization
-
-We selected four high resource languages for this task with varying degrees of morphological complexity: English, German, Portuguese, and Russian.
-Systems will be trained on real words from these languages on the task of morphological inflection, but will then be evaluated on a selection of wug wordforms --- they will be compared to both human plausibility judgements and productions.
-
-For training models, we provide participants with inflection data from [UniMorph](https://unimorph.github.io/).
-The training data has been converted into phonemes and is composed of <lemma, inflected_form, inflection_tags> triples.
-
-The evaluation will be conducted on a new set of wug word forms.
-Wugs were generated in each language so as to cover a diverse subset of the language’s phonotactic space.
-The steps to generate these wugs were:
-1. Transduce Unimorph’s word lists into IPA using the baseline encoder-decoder from SIGMORPHON 2020 task 1 (https://github.com/sigmorphon/2020/tree/master/task1/baselines/encoder-decoder) , filtering out any word whose 'concept' has a zipf frequency of 3 or lower using the wordfreq package(https://doi.org/10.5281/zenodo.1443582)
-2. Choose a tagset in the given language that is likely to be irregular, e.g. V;PST in English or N;ACC;PL for German.
-3. Train an LSTM on each language, conditioning it on the inflection tag.
-4. Sample new wug lemmas from the LSTM, removing already existing word forms.
-5. Subsample a diverse set of wugs based on their likelihood to be irregular, lexical neighborhood, and phonotactic probability (this step relies on several factors and will be described in detail at a later point).
-6. Train a neural transducer on IPA UniMorph.
-7. Generate inflections for chosen wugs.
-
-We then presented inflections to a group of native speakers to get plausibility judgements, while we asked another group to inflect the lemmas directly to get production probabilities. We will later release a subset of this wug data so participants can validate their systems with them.
-
-
-## Timeline
+### Timeline
 (Estimated Dates)
 
 **Stage 1: Development Phase**
@@ -110,7 +89,7 @@ We then presented inflections to a group of native speakers to get plausibility 
 * May 15, 2021: Participants’ system description papers camera ready due.
 
 
-## Data
+### Data
 The training and development data are provided in a simple utf-8 encoded text format for both the development and surprise languages. Each line in a file is an example that consists of word forms and corresponding morphosyntactic descriptions (MSDs) provided as a set of features, separated by semicolons. We refer to the MSDs as (morphological) tags for simplicity. The fields on a line are TAB-separated.
 The fields are: lemma, target form, tag. Here we present an example from the Akan training data (the Akan verb “bisa” means “to ask” in English):
 
@@ -124,7 +103,7 @@ We will provide varying amounts of labeled training data, depending on the langu
 
 
 
-## Evaluation
+### Evaluation
 
 The language generalization evaluation will follow last year's design. We will simultaneously evaluate models for both the Development languages, whose training and development sets will be available for an elongated period of time, and the Surprise languages, whose training and development sets will only be available for a short time prior to submission, which precludes extensive tuning. To be officially ranked, you must submit results for **all** evaluation languages. Thus, to succeed, your class of models (e.g. neural sequence-to-sequence models or weighted finite-state transducers with hand-crafted features) must generalize well to the group of Surprise languages that are typologically distinct from the Development languages you performed model selection on. To repeat: This is not a zero-shot learning task, but rather our evaluation set-up is designed to test the inherent inductive bias in the participants' chosen model class.
 
@@ -133,14 +112,39 @@ We will simultaneously evaluate the accuracy on held-out forms for languages fro
 The human-like generalization part of this shared task will be evaluated based on a morphological inflection system's output correlation with both human plausibility scores and production probabilities. These outputs will be evaluated at multiple data glanuralities. They will be separately evaluated based on wugs which are similar to regular existing words, similar to irregulars, to both, or to neither.
 
 
-## Baselines
+### Baselines
 
 The organizers will provide one neural baseline for the participants’ consumption.
 Its use is optional and is provided to help the participants develop their own models faster.
 This baseline is a multilingual transformer ([Vaswani et al., 2017](https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf)). The version of this model adopted for character-level tasks currently holds the state-of-the-art on the 2017 SIGMORPHON shared task data. The transformer takes the lemma and morphological tags as input and outputs the target inflection. Given the low-resource setup, a single model will be trained on all languages. Additionally, we consider the data augmentation technique used by [Anastasopoulos and Neubig (2019)](https://www.aclweb.org/anthology/D19-1091/) as another baseline.
 
-## References
+### References
 
 Anastasopoulos and Neubig. [“Pushing the Limits of Low-Resource Morphological Inflection.”](https://www.aclweb.org/anthology/D19-1091/) Proceedings of EMNLP 2019.
 
 Vaswani et al. [“Attention is All You Need.”](https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf) Proceedings of NeurIPS 2017.
+
+
+
+## Part 2: Are We There Yet? A Shared Task on Cognitively Plausible Morphological Inflection
+
+We selected four high resource languages for this task with varying degrees of morphological complexity: English, German, Portuguese, and Russian.
+Systems will be trained on real words from these languages on the task of morphological inflection, but will then be evaluated on a selection of wug wordforms --- they will be compared to both human plausibility judgements and productions.
+
+For training models, we provide participants with inflection data from [UniMorph](https://unimorph.github.io/).
+The training data has been converted into phonemes and is composed of <lemma, inflected_form, inflection_tags> triples.
+
+The evaluation will be conducted on a new set of wug word forms.
+Wugs were generated in each language so as to cover a diverse subset of the language’s phonotactic space.
+The steps to generate these wugs were:
+1. Transduce Unimorph’s word lists into IPA using the baseline encoder-decoder from SIGMORPHON 2020 task 1 (https://github.com/sigmorphon/2020/tree/master/task1/baselines/encoder-decoder) , filtering out any word whose 'concept' has a zipf frequency of 3 or lower using the wordfreq package(https://doi.org/10.5281/zenodo.1443582)
+2. Choose a tagset in the given language that is likely to be irregular, e.g. V;PST in English or N;ACC;PL for German.
+3. Train an LSTM on each language, conditioning it on the inflection tag.
+4. Sample new wug lemmas from the LSTM, removing already existing word forms.
+5. Subsample a diverse set of wugs based on their likelihood to be irregular, lexical neighborhood, and phonotactic probability (this step relies on several factors and will be described in detail at a later point).
+6. Train a neural transducer on IPA UniMorph.
+7. Generate inflections for chosen wugs.
+
+We then presented inflections to a group of native speakers to get plausibility judgements, while we asked another group to inflect the lemmas directly to get production probabilities. We will later release a subset of this wug data so participants can validate their systems with them.
+
+
