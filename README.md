@@ -153,7 +153,7 @@ This shared task adopts the experimental paradigm introduced by [Albright and Ha
 + pide /paɪd/
 + sprake /spɹeɪk/
 
-In many cases, there is arguably more than one “correct” way to inflect these verbs according to English grammar because they are unattested. For instance, who is to say that the past tense of “fink” should be “finked” and not “fank”. For that reason, we have elicited human judgements (on [Amazon’s Mechanical Turk](https://www.mturk.com/) that tell native speakers’ preferences towards specific past tense inflections. The candidate set of potential inflections were generated through a linguist-in-the-loop procedure that made use of the state-of-the-art neural inflector from [Wu et al. (2021)](https://arxiv.org/abs/2005.10213). 
+In many cases, there is arguably more than one “correct” way to inflect these verbs according to English grammar because they are unattested. For instance, who is to say that the past tense of “fink” should be “finked” and not “fank”. For that reason, we have elicited human judgements (on [Amazon’s Mechanical Turk](https://www.mturk.com/)) that tell native speakers’ preferences towards specific past tense inflections. The candidate set of potential inflections were generated through a linguist-in-the-loop procedure that made use of the state-of-the-art neural inflector from [Wu et al. (2021)](https://arxiv.org/abs/2005.10213). 
 
 ### Timeline
 
@@ -220,7 +220,7 @@ Albright, A., & Hayes, B. (2003). [Rules vs. analogy in English past tenses: A c
 
 Marcus, G. F. (2001). [The Algebraic Mind: Integrating Connectionism and Cognitive Science](https://mitpress.mit.edu/books/algebraic-mind). MIT Press.
 
-Corkery, M., Matusevych, Y., & Goldwater, S. (2019). [Corkery et al. (2019)](https://arxiv.org/abs/1906.01280). Proceedings of ACL 2019.
+Corkery, M., Matusevych, Y., & Goldwater, S. (2019). [Are we there yet? Encoder-decoder neural networks as cognitive models of English past tense inflection](https://arxiv.org/abs/1906.01280). Proceedings of ACL 2019.
 
 Kirov, C. and Cotterell, R. (2018). [Recurrent Neural Networks in Linguistic Theory: Revisiting Pinker and Prince (1988) and the Past Tense Debate](https://arxiv.org/abs/1807.04783). TACL 2018. 
 
