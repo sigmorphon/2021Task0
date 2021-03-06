@@ -2,15 +2,15 @@
 
 SIGMORPHON’s sixth installment of its inflection generation shared task will be divided into two parts: 
 
-+ ***Part 1***: Generalization across typologically diverse languages
-+ ***Part 2***: Cognitive plausibility of morphological inflection systems
++ ***Part 1***: Generalization Across Typologically Diverse Languages
++ ***Part 2***: Are We There Yet? A Shared Task on Cognitively Plausible Morphological Inflection
 
 Please join our [Google Group](https://groups.google.com/forum/#!forum/sigmorphon2021-sharedtask0/join) to stay up to date.
 
 [Register for the task!](https://forms.gle/tu4tX648F9kA9eps7)
 
 
-## Part 1: Generalization across Languages
+## Part 1: Generalization Across Typologically Diverse Languages
 
 
 ### Task Description
@@ -217,5 +217,5 @@ Wu, S., Cotterell, R., and Hulden, M. (2021). [Applying the Transformer to Chara
 
 
 
-<sup>1</sup>Our title is inspired (i.e. taken from) a related paper by [Corkery et al. (2019)](https://arxiv.org/abs/1906.01280).
+<sup>1</sup>Our title is inspired by [Corkery et al. (2019)](https://arxiv.org/abs/1906.01280).
 
