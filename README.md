@@ -2,15 +2,15 @@
 
 SIGMORPHON’s sixth installment of its inflection generation shared task will be divided into two parts: 
 
-+ ***Part 1***: [Generalization across typologically diverse languages](https://github.com/sigmorphon/2021Task0/blob/main/README.md#part-1-generalization-across-languages)
-+ ***Part 2***: [Cognitive plausibility of morphological inflection systems](https://github.com/sigmorphon/2021Task0/blob/main/README.md#part-2-are-we-there-yet1-a-shared-task-on-cognitively-plausible-morphological-inflection)
++ ***Part 1***: [Generalization Across Typologically Diverse Languages](https://github.com/sigmorphon/2021Task0/blob/main/README.md#part-1-generalization-across-languages)
++ ***Part 2***: [Are We There Yet?<sup>1</sup> A Shared Task on Cognitively Plausible Morphological Inflection](https://github.com/sigmorphon/2021Task0/blob/main/README.md#part-2-are-we-there-yet1-a-shared-task-on-cognitively-plausible-morphological-inflection)
 
 Please join our [Google Group](https://groups.google.com/forum/#!forum/sigmorphon2021-sharedtask0/join) to stay up to date.
 
 [Register for the task!](https://forms.gle/tu4tX648F9kA9eps7)
 
 
-## Part 1: Generalization across Languages
+## Part 1: Generalization Across Typologically Diverse Languages
 
 
 ### Task Description
@@ -132,7 +132,7 @@ Vaswani et al. [“Attention is All You Need.”](https://papers.nips.cc/paper/7
 
 
 
-## Part 2: Are We There Yet?<sup>1</sup> A Shared Task on Cognitively Plausible Morphological Inflection
+## Part 2: Are We There Yet? A Shared Task on Cognitively Plausible Morphological Inflection
 
 ### Task Description
 An open question in the use of neural networks for the study of language is to what degree they resemble human-like language production. In the realm of morphology, this question goes back 40 years to the infamous past-tense debate of the 1980s where one camp argued humans use rule-based mechanisms and another argued that humans inflect words with a process closer to neural networks. See Gary Marcus’ book [The Algebraic Mind](https://mitpress.mit.edu/books/algebraic-mind) for an overview or several recent papers in the ACL community on the topic, e.g. [Kirov and Cotterell (2019)](https://arxiv.org/abs/1807.04783), [Corkery et al. (2019)](https://arxiv.org/abs/1906.01280) and [McCurdy et al. (2020)](https://www.aclweb.org/anthology/2020.acl-main.159/). 
