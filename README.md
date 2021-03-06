@@ -128,23 +128,69 @@ Vaswani et al. [“Attention is All You Need.”](https://papers.nips.cc/paper/7
 
 ## Part 2: Are We There Yet? A Shared Task on Cognitively Plausible Morphological Inflection
 
-We selected four high resource languages for this task with varying degrees of morphological complexity: English, German, Portuguese, and Russian.
-Systems will be trained on real words from these languages on the task of morphological inflection, but will then be evaluated on a selection of wug wordforms --- they will be compared to both human plausibility judgements and productions.
 
-For training models, we provide participants with inflection data from [UniMorph](https://unimorph.github.io/).
-The training data has been converted into phonemes and is composed of <lemma, inflected_form, inflection_tags> triples.
+An open question in the use of neural networks for the study of language is to what degree they resemble human-like language production. In the realm of morphology, this question goes back 40 years to the infamous past-tense debate of the 1980s where one camp argued humans use rule-based mechanisms and another argued that humans inflect words with a process closer to neural networks. See Gary Marcus’ book The Algebraic Mind for an overview or several recent papers in the ACL community on the topic, e.g. Kirov and Cotterell (2019), Corkery et al. (2019) and McCurdy et al. (2020). 
 
-The evaluation will be conducted on a new set of wug word forms.
-Wugs were generated in each language so as to cover a diverse subset of the language’s phonotactic space.
-The steps to generate these wugs were:
-1. Transduce Unimorph’s word lists into IPA using the baseline encoder-decoder from SIGMORPHON 2020 task 1 (https://github.com/sigmorphon/2020/tree/master/task1/baselines/encoder-decoder) , filtering out any word whose 'concept' has a zipf frequency of 3 or lower using the wordfreq package(https://doi.org/10.5281/zenodo.1443582)
-2. Choose a tagset in the given language that is likely to be irregular, e.g. V;PST in English or N;ACC;PL for German.
-3. Train an LSTM on each language, conditioning it on the inflection tag.
-4. Sample new wug lemmas from the LSTM, removing already existing word forms.
-5. Subsample a diverse set of wugs based on their likelihood to be irregular, lexical neighborhood, and phonotactic probability (this step relies on several factors and will be described in detail at a later point).
-6. Train a neural transducer on IPA UniMorph.
-7. Generate inflections for chosen wugs.
+This shared task adopts the experimental paradigm introduced by Albright and Hayes (2003). In four languages (English, German, Portuguese and Russian) we have created a large number of new nonce words. To the best of our knowledge, this will be the largest and most multilingual collection of nonce words in existence. The goal of the participants in the shared task is to design a model that morphologically inflects the nonce words according to the grammar of the given languages. As an example, consider the following nonce verbs that obey English phonotactics:
+blad /blæd/
+crast /kɹæst/
+flink /flɪŋk/
+pide /paɪd/
+sprake /spɹeɪk/
+In many cases, there is arguably more than one “correct” way to inflect these verbs according to English grammar because they are unattested. For instance, who is to say that the past tense of “fink” should be “finked” and not “fank”. For that reason, we have elicited human judgements (on Amazon’s Mechanical Turk) that tell native speakers’ preferences towards specific past tense inflections. The candidate set of potential inflections were generated through a linguist-in-the-loop procedure that made use of the state-of-the-art neural inflector from Wu et al. (2021). 
 
-We then presented inflections to a group of native speakers to get plausibility judgements, while we asked another group to inflect the lemmas directly to get production probabilities. We will later release a subset of this wug data so participants can validate their systems with them.
+### Task Details
 
+#### Data
+
+The training data are attested inflections in four languages (English, German, Portuguese and Russian) in. You may download them here. The data are in the standard UniMorph triple file format:
+
+
+<div class="language-plaintext highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>talk talking V;V.PTCP;PRS</code></pre>
+</div>
+</div>
+
+
+
+
+
+
+
+In contrast to the example above, the words are encoded in the international phonetic alphabet (IPA) not in the standard orthography for the given language. 
+
+The development and test data are in a different format. They are quadruples 
+
+<div class="language-plaintext highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>fink finked V;PST 3.2</code></pre>
+<pre class="highlight"><code>fink fank V;PST 4.1</code></pre>
+<pre class="highlight"><code>fink funk V;PST 1.7</code></pre>
+
+</div>
+</div>
+where the fourth column is a native-speaker rating on a Likert scale. As stated above, these rankings were given by native speakers on Amazon’s Mechanical Turk. 
+
+#### Evaluation
+
+The task is evaluated in the following manner. Having trained a model on the training data, the participants are asked to provide scores for each inflection of the novel word. For instance, if the model is probabilistic (which is not a requirement!), the participants are asked to provide -log(finking | fink, V;V.PTCP;PRS) and -log(fank | fink, V;V.PTCP;PRS) for the examples above.
+For each wug lemma a micro-correlation is computed (Spearman's ρ). Then, a macro-average is computed by averaging the micro-correlations. Systems will be ranked by the final macro-average. A script will be provided for system evaluation. 
+
+#### Timeline
+February 25th, 2021: Training data for English, German, Portuguese and Russian are released. In contrast to previous year’s shared tasks, the data are in IPA. We invite participants to report errors.
+March 8th, 2021: Neural and non-neural baselines for development languages released.
+May 1st, 2021: Development data for nonce inflections is released. (This includes human judgements.)
+May 23rd, 2021: Test data for the nonce inflection is released. (This includes human judgements.)
+June 1th, 2021: Users submit their system output.
+June 7th, 2021: Users submit their system description paper. 
+Organizers
+Tiago Pimentel (University of Cambridge) 
+Brian Leonard (Brian Leonard Consulting)
+Maria Ryskina (Carnegie Mellon University)
+Sabrina Mielke (Johns Hopkins University)
+Eleanor Chodroff (University of York)
+Ryan Cotterell (ETH Zürich)
+Ekaterina Vylomova (University of Melbourne)
+Ben Ambridge (University of Liverpool)
 
