@@ -1,16 +1,16 @@
-# Task0: SIGMORPHON–UniMorph Shared Task on Generalization in Morphological Inflection Generation
+# SIGMORPHON–UniMorph Shared Task on Generalization in Morphological Inflection Generation
 
-SIGMORPHON’s sixth installment of its inflection generation shared task focuses on two aspects: 
+SIGMORPHON’s sixth installment of its inflection generation shared task will be divided into two parts: 
 
-1. Generalization across typologically diverse languages
-2. Cognitive plausibility of morphological inflection systems
++ ***Part 1***: [Generalization Across Typologically Diverse Languages](https://github.com/sigmorphon/2021Task0/blob/main/README.md#part-1-generalization-across-languages)
++ ***Part 2***: [Are We There Yet?<sup>1</sup> A Shared Task on Cognitively Plausible Morphological Inflection](https://github.com/sigmorphon/2021Task0/blob/main/README.md#part-2-are-we-there-yet1-a-shared-task-on-cognitively-plausible-morphological-inflection)
 
 Please join our [Google Group](https://groups.google.com/forum/#!forum/sigmorphon2021-sharedtask0/join) to stay up to date.
 
 [Register for the task!](https://forms.gle/tu4tX648F9kA9eps7)
 
 
-## Part 1: Generalization across Languages
+## Part 1: Generalization Across Typologically Diverse Languages
 
 
 ### Task Description
@@ -132,10 +132,9 @@ Vaswani et al. [“Attention is All You Need.”](https://papers.nips.cc/paper/7
 
 
 
-### Part 2: Are We There Yet?[^1] A Shared Task on Cognitively Plausible Morphological Inflection
-[^1]: Our title is inspired (i.e. taken from) a related paper by [Corkery et al. (2019)](https://arxiv.org/abs/1906.01280).
+## Part 2: Are We There Yet? A Shared Task on Cognitively Plausible Morphological Inflection
 
-#### Task Description
+### Task Description
 An open question in the use of neural networks for the study of language is to what degree they resemble human-like language production. In the realm of morphology, this question goes back 40 years to the infamous past-tense debate of the 1980s where one camp argued humans use rule-based mechanisms and another argued that humans inflect words with a process closer to neural networks. See Gary Marcus’ book [The Algebraic Mind](https://mitpress.mit.edu/books/algebraic-mind) for an overview or several recent papers in the ACL community on the topic, e.g. [Kirov and Cotterell (2019)](https://arxiv.org/abs/1807.04783), [Corkery et al. (2019)](https://arxiv.org/abs/1906.01280) and [McCurdy et al. (2020)](https://www.aclweb.org/anthology/2020.acl-main.159/). 
 
 
@@ -149,18 +148,18 @@ This shared task adopts the experimental paradigm introduced by [Albright and Ha
 
 In many cases, there is arguably more than one “correct” way to inflect these verbs according to English grammar because they are unattested. For instance, who is to say that the past tense of “fink” should be “finked” and not “fank”. For that reason, we have elicited human judgements (on [Amazon’s Mechanical Turk](https://www.mturk.com/) that tell native speakers’ preferences towards specific past tense inflections. The candidate set of potential inflections were generated through a linguist-in-the-loop procedure that made use of the state-of-the-art neural inflector from [Wu et al. (2021)](https://arxiv.org/abs/2005.10213). 
 
-#### Timeline
+### Timeline
 
-* February 25th, 2021: Training data for English, German, Portuguese and Russian are released. In contrast to previous year’s shared tasks, the data are in IPA. We invite participants to report errors.
-* March 8th, 2021: Neural and non-neural baselines for development languages released.
-* May 1st, 2021: Development data for nonce inflections is released. (This includes human judgements.)
-* May 23rd, 2021: Test data for the nonce inflection is released. (This includes human judgements.)
-* June 1th, 2021: Users submit their system output.
-* June 7th, 2021: Users submit their system description paper. 
+* ***February 25th, 2021***: Training data for English, German, Portuguese and Russian are released. In contrast to previous year’s shared tasks, the data are in IPA. We invite participants to report errors.
+* ***March 8th, 2021***: Neural and non-neural baselines for development languages released.
+* ***May 1st, 2021***: Development data for nonce inflections is released. (This includes human judgements.)
+* ***May 23rd, 2021***: Test data for the nonce inflection is released. (This includes human judgements.)
+* ***June 1th, 2021***: Users submit their system output.
+* ***June 7th, 2021***: Users submit their system description paper. 
 
-#### Data
+### Data
 
-The training data are attested inflections in four languages (English, German, Portuguese and Russian) in. You may download them [here](https://github.com/sigmorphon/2021Task0/tree/main/part2). The data are in the standard UniMorph triple file format:
+The training data are attested inflections in four languages (English, German, Portuguese and Russian) in. You may download them [here](https://github.com/sigmorphon/2021Task0/tree/main/part2). The data are in the standard UniMorph triple TSV file format [Kirov et al. 2018](https://arxiv.org/abs/1810.11101):
 
 
 <div class="language-plaintext highlighter-rouge">
@@ -174,24 +173,25 @@ In contrast to the example above, the words are encoded in the [International Ph
 
 The **development** and **test data** are in a different format. They are quadruples 
 
-<div class="language-plaintext highlighter-rouge">
-<div class="highlight">
-<pre class="highlight"><code>fink finked V;PST 3.2</code></pre>
-<pre class="highlight"><code>fink fank V;PST 4.1</code></pre>
-<pre class="highlight"><code>fink funk V;PST 1.7</code></pre>
+````
+fink  finked  V;PST   3.2
+fink  fank    V;PST   4.1
+fink  funk    V;PST   1.5
+````
 
-</div>
-</div>
 where the fourth column is a native-speaker rating on a [Likert scale](https://en.wikipedia.org/wiki/Likert_scale). As stated above, these rankings were given by native speakers on Amazon’s Mechanical Turk. 
 
-#### Evaluation
+### Baselines
+
+The system of [Wu et al. (2021)](https://arxiv.org/abs/2005.10213) as well as non-neural system will be provided as baselines. 
+
+### Evaluation
 
 The task is evaluated in the following manner. Having trained a model on the training data, the participants are asked to provide scores for each inflection of the novel word. For instance, if the model is probabilistic (which is not a requirement!), the participants are asked to provide -log(finking | fink, V;V.PTCP;PRS) and -log(fank | fink, V;V.PTCP;PRS) for the examples above.
-For each wug lemma a micro-correlation is computed ([Spearman's ρ](https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient)). Then, a macro-average is computed by averaging the micro-correlations. Systems will be ranked by the final macro-average. A script will be provided for system evaluation. 
+For each wug lemma a micro-correlation is computed ([Spearman's ρ](https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient)). Then, a macro-average is computed by averaging the micro-correlations. Systems will be ranked by the final macro-average. A script will be provided for system evaluation closer to the submission date. 
 
 
-
-## Organizers
+### Organizers
 
 * Tiago Pimentel (University of Cambridge) 
 * Brian Leonard (Brian Leonard Consulting)
@@ -203,4 +203,9 @@ For each wug lemma a micro-correlation is computed ([Spearman's ρ](https://en.w
 * Ben Ambridge (University of Liverpool)
 
 
+
+
+### References
+
+<sup>1</sup>Our title is inspired (i.e. taken from) a related paper by [Corkery et al. (2019)](https://arxiv.org/abs/1906.01280).
 
