@@ -204,6 +204,3 @@ For each wug lemma a micro-correlation is computed ([Spearman's ρ](https://en.w
 
 
 
-
-### References
-
