@@ -132,7 +132,7 @@ Vaswani et al. [“Attention is All You Need.”](https://papers.nips.cc/paper/7
 
 
 
-### Part 2: Are We There Yet?<sup>1</sup>. A Shared Task on Cognitively Plausible Morphological Inflection
+### Part 2: Are We There Yet?<sup>1</sup> A Shared Task on Cognitively Plausible Morphological Inflection
 
 #### Task Description
 An open question in the use of neural networks for the study of language is to what degree they resemble human-like language production. In the realm of morphology, this question goes back 40 years to the infamous past-tense debate of the 1980s where one camp argued humans use rule-based mechanisms and another argued that humans inflect words with a process closer to neural networks. See Gary Marcus’ book [The Algebraic Mind](https://mitpress.mit.edu/books/algebraic-mind) for an overview or several recent papers in the ACL community on the topic, e.g. [Kirov and Cotterell (2019)](https://arxiv.org/abs/1807.04783), [Corkery et al. (2019)](https://arxiv.org/abs/1906.01280) and [McCurdy et al. (2020)](https://www.aclweb.org/anthology/2020.acl-main.159/). 
@@ -173,21 +173,18 @@ In contrast to the example above, the words are encoded in the [International Ph
 
 The **development** and **test data** are in a different format. They are quadruples 
 
-<div class="language-plaintext highlighter-rouge">
-<div class="highlight">
-<pre class="highlight"><code>fink finked V;PST 3.2</code></pre>
-<pre class="highlight"><code>fink fank V;PST 4.1</code></pre>
-<pre class="highlight"><code>fink funk V;PST 1.7</code></pre>
+````
+fink finked V;PST 3.2
+fink fank V;PST 4.1
+fink funk V;PST
+````
 
-</div>
-</div>
 where the fourth column is a native-speaker rating on a [Likert scale](https://en.wikipedia.org/wiki/Likert_scale). As stated above, these rankings were given by native speakers on Amazon’s Mechanical Turk. 
 
 #### Evaluation
 
 The task is evaluated in the following manner. Having trained a model on the training data, the participants are asked to provide scores for each inflection of the novel word. For instance, if the model is probabilistic (which is not a requirement!), the participants are asked to provide -log(finking | fink, V;V.PTCP;PRS) and -log(fank | fink, V;V.PTCP;PRS) for the examples above.
 For each wug lemma a micro-correlation is computed ([Spearman's ρ](https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient)). Then, a macro-average is computed by averaging the micro-correlations. Systems will be ranked by the final macro-average. A script will be provided for system evaluation. 
-
 
 
 #### Organizers
