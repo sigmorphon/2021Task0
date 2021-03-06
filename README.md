@@ -163,12 +163,9 @@ In contrast to the example above, the words are encoded in the international pho
 The development and test data are in a different format. They are quadruples 
 
 <div class="language-plaintext highlighter-rouge">
-<div class="highlight">
-<pre class="highlight"><code>fink finked V;PST 3.2</code></pre>
-<pre class="highlight"><code>fink fank V;PST 4.1</code></pre>
+<pre class="highlight"><code>fink finked V;PST 3.2</code>
+<pre class="highlight"><code>fink fank V;PST 4.1</code>
 <pre class="highlight"><code>fink funk V;PST 1.7</code></pre>
-
-</div>
 </div>
 where the fourth column is a native-speaker rating on a Likert scale. As stated above, these rankings were given by native speakers on Amazon’s Mechanical Turk. 
 
@@ -177,7 +174,7 @@ where the fourth column is a native-speaker rating on a Likert scale. As stated 
 The task is evaluated in the following manner. Having trained a model on the training data, the participants are asked to provide scores for each inflection of the novel word. For instance, if the model is probabilistic (which is not a requirement!), the participants are asked to provide -log(finking | fink, V;V.PTCP;PRS) and -log(fank | fink, V;V.PTCP;PRS) for the examples above.
 For each wug lemma a micro-correlation is computed (Spearman's ρ). Then, a macro-average is computed by averaging the micro-correlations. Systems will be ranked by the final macro-average. A script will be provided for system evaluation. 
 
-#### Timeline
+### Timeline
 February 25th, 2021: Training data for English, German, Portuguese and Russian are released. In contrast to previous year’s shared tasks, the data are in IPA. We invite participants to report errors.
 March 8th, 2021: Neural and non-neural baselines for development languages released.
 May 1st, 2021: Development data for nonce inflections is released. (This includes human judgements.)
