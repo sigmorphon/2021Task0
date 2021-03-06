@@ -2,8 +2,8 @@
 
 SIGMORPHON’s sixth installment of its inflection generation shared task will be divided into two parts: 
 
-+ ***Part 1***: Generalization Across Typologically Diverse Languages
-+ ***Part 2***: Are We There Yet? A Shared Task on Cognitively Plausible Morphological Inflection
++ ***Part 1***: [Generalization Across Typologically Diverse Languages](https://github.com/sigmorphon/2021Task0#part-1-generalization-across-typologically-diverse-languages)
++ ***Part 2***: [Are We There Yet? A Shared Task on Cognitively Plausible Morphological Inflection](https://github.com/sigmorphon/2021Task0#part-2-are-we-there-yet1-a-shared-task-on-cognitively-plausible-morphological-inflection)
 
 Please join our [Google Group](https://groups.google.com/forum/#!forum/sigmorphon2021-sharedtask0/join) to stay up to date.
 
@@ -186,7 +186,7 @@ where the fourth column is a native-speaker rating on a [Likert scale](https://e
 The task is evaluated in the following manner. Having trained a model on the training data, the participants are asked to provide scores for each inflection of the novel word. For instance, if the model is probabilistic (which is not a requirement!), the participants are asked to provide -log(finking | fink, V;V.PTCP;PRS) and -log(fank | fink, V;V.PTCP;PRS) for the examples above.
 For each wug lemma a micro-correlation is computed ([Spearman's ρ](https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient)). Then, a macro-average is computed by averaging the micro-correlations. Systems will be ranked by the final macro-average. A script will be provided for system evaluation. 
 
-#### Organizers
+### Organizers
 
 * Tiago Pimentel (University of Cambridge) 
 * Brian Leonard (Brian Leonard Consulting)
