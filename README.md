@@ -96,8 +96,8 @@ Annotators: Salam Khalifa, Nizar Habash, Charbel El-Khaissi, Omer Goldman, Micha
 * ***May 4, 2021***: Participants submit test predictions on all languages.
 
 **Stage 4: Write-up Phase**
-* ***May 8, 2021***: Participants’ system description papers due.
-* ***May 15, 2021***: Participants’ system description papers camera ready due.
+* ***June 1, 2021***: Participants’ system description papers due.
+* ***June 7, 2021***: Participants’ system description papers camera ready due.
 
 
 ### Data
@@ -155,12 +155,12 @@ In many cases, there is arguably more than one “correct” way to inflect thes
 
 ### Timeline
 
-* ***February 25th, 2021***: Training data for English, German, Portuguese and Russian are released. In contrast to previous year’s shared tasks, the data are in IPA. We invite participants to report errors.
-* ***March 8th, 2021***: Neural and non-neural baselines for development languages released.
-* ***May 1st, 2021***: Development data for nonce inflections are released. (This includes human judgements.)
-* ***May 23rd, 2021***: Test data for the nonce inflections are released. (This includes human judgements.)
-* ***June 1th, 2021***: Users submit their system output.
-* ***June 7th, 2021***: Users submit their system description paper. 
+* ***February 25, 2021***: Training data for English, German, Portuguese and Russian are released. In contrast to previous year’s shared tasks, the data are in IPA. We invite participants to report errors.
+* ***March 8, 2021***: Neural and non-neural baselines for development languages released.
+* ***May 1, 2021***: Development data for nonce inflections are released. (This includes human judgements.)
+* ***May 23, 2021***: Test data for the nonce inflections are released. (This includes human judgements.)
+* ***June 1, 2021***: Users submit their system output.
+* ***June 7, 2021***: Users submit their system description paper. 
 
 ### Data and Evaluation
 
