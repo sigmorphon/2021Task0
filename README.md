@@ -59,6 +59,11 @@ In the ***Evaluation Phase***, the participants’ models will be evaluated on h
 | Polish | Indo-European | pol | https://github.com/unimorph/pol | Witold Kieraś, Marcin Wolinski | 
 | Russian | Indo-European | rus | https://github.com/unimorph/rus | Wiktionary | 
 | Czech | Indo-European | ces | https://github.com/unimorph/ces | Wiktionary| 
+| Bulgarian | Indo-European | bul | https://github.com/unimorph/bul | Wiktionary | 
+| German | Indo-European | deu | https://github.com/unimorph/deu | Wiktionary | 
+| Dutch | Indo-European | nld | https://github.com/unimorph/nld | Wiktionary | 
+| Spanish | Indo-European | spa | https://github.com/unimorph/spa | Wiktionary |
+| Portuguese | Indo-European | por | https://github.com/unimorph/por | Wiktionary | 
 | Braj | Indo-European | bra | https://github.com/unimorph/bra |Ritesh Kumar | 
 | Magahi | Indo-European | mag | https://github.com/unimorph/mag | Ritesh Kumar | 
 | Indonesian | Austronesian| ind | https://github.com/unimorph/ind   | Clara Vania | 
