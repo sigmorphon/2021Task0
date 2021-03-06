@@ -24,14 +24,14 @@ The task will be divided in two parts, the first forcuses on the inflection mode
 
 
 ### Task Details
-This task will proceed in three phases: a Development Phase, a Generalization Phase, and an Evaluation Phase. As the task progresses, more data and more languages will be released.
+This task will proceed in three phases: the ***Development Phase***, the ***Generalization Phase***, and the ***Evaluation Phase**. As the task progresses, more data and more languages will be released.
 
-In the Development Phase, we will provide training and development splits that should be used to *develop* your system.
+In the ***Development Phase***, we will provide training and development splits that should be used to *develop* your system.
 We will refer to them as the *development languages*. The list of languages will be announced shortly.
 
-In the Generalization Phase, we will provide training and development splits for new languages where approximately half are genetically related (belong to the same family) and half are genetically *unrelated* (are isolates or belong to a different family) to the development languages. We will keep the languages in the Generalization Phase a surprise until April 2021. We will also keep the genetically unrelated language *families* a surprise, though some languages will come from the same families as those in the Development Phase.
+In the ***Generalization Phase***, we will provide training and development splits for new languages where approximately half are genetically related (belong to the same family) and half are genetically *unrelated* (are isolates or belong to a different family) to the development languages. We will keep the languages in the Generalization Phase a surprise until April 2021. We will also keep the genetically unrelated language *families* a surprise, though some languages will come from the same families as those in the Development Phase.
 
-In the Evaluation Phase, the participants’ models will be evaluated on held-out forms from all of the languages from the previous phases. The languages from the Development Phase and the Generalization Phase are evaluated simultaneously. The only difference is that there has been more time to construct a model for those languages released in the Development Phase. It follows that a model could easily overfit to or favor phenomena that are more frequent in languages presented in the Development Phase, especially if parameters are shared across languages. For instance, a model based on the morphological patterning of the Indo-European languages may end up with a bias towards suffixing and will struggle to learn prefixing or circumfixation, the degree to which only becomes apparent during experimentation on other languages whose inflectional morphology patterns differ. Of course, the model architecture itself could explicitly or implicitly favor certain word formation types (suffixing, prefixing, etc.).
+In the ***Evaluation Phase***, the participants’ models will be evaluated on held-out forms from all of the languages from the previous phases. The languages from the Development Phase and the Generalization Phase are evaluated simultaneously. The only difference is that there has been more time to construct a model for those languages released in the Development Phase. It follows that a model could easily overfit to or favor phenomena that are more frequent in languages presented in the Development Phase, especially if parameters are shared across languages. For instance, a model based on the morphological patterning of the Indo-European languages may end up with a bias towards suffixing and will struggle to learn prefixing or circumfixation, the degree to which only becomes apparent during experimentation on other languages whose inflectional morphology patterns differ. Of course, the model architecture itself could explicitly or implicitly favor certain word formation types (suffixing, prefixing, etc.).
 
 
 #### Development Languages
@@ -152,8 +152,8 @@ In many cases, there is arguably more than one “correct” way to inflect thes
 
 * ***February 25th, 2021***: Training data for English, German, Portuguese and Russian are released. In contrast to previous year’s shared tasks, the data are in IPA. We invite participants to report errors.
 * ***March 8th, 2021***: Neural and non-neural baselines for development languages released.
-* ***May 1st, 2021***: Development data for nonce inflections is released. (This includes human judgements.)
-* ***May 23rd, 2021***: Test data for the nonce inflection is released. (This includes human judgements.)
+* ***May 1st, 2021***: Development data for nonce inflections are released. (This includes human judgements.)
+* ***May 23rd, 2021***: Test data for the nonce inflections are released. (This includes human judgements.)
 * ***June 1th, 2021***: Users submit their system output.
 * ***June 7th, 2021***: Users submit their system description paper. 
 
