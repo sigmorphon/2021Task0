@@ -1,4 +1,4 @@
-# Task0: SIGMORPHON–UniMorph Shared Task on Generalization in Morphological Inflection Generation
+# SIGMORPHON–UniMorph Shared Task on Generalization in Morphological Inflection Generation
 
 SIGMORPHON’s sixth installment of its inflection generation shared task focuses on two aspects: 
 
