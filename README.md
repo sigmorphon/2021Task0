@@ -25,6 +25,42 @@ In the Generalization Phase, we will provide training and development splits for
 
 In the Evaluation Phase, the participants’ models will be evaluated on held-out forms from all of the languages from the previous phases. The languages from the Development Phase and the Generalization Phase are evaluated simultaneously. The only difference is that there has been more time to construct a model for those languages released in the Development Phase. It follows that a model could easily overfit to or favor phenomena that are more frequent in languages presented in the Development Phase, especially if parameters are shared across languages. For instance, a model based on the morphological patterning of the Indo-European languages may end up with a bias towards suffixing and will struggle to learn prefixing or circumfixation, the degree to which only becomes apparent during experimentation on other languages whose inflectional morphology patterns differ. Of course, the model architecture itself could explicitly or implicitly favor certain word formation types (suffixing, prefixing, etc.).
 
+#### Development Languages
+
+| Language | Family| code | UM | Annotators  | 
+|---|---|---|---|---|
+|Egyptian Arabic |Afro-Asiatic | arz  | https://github.com/unimorph/arz/  | Salam Khalifa and Nizar Habash  |
+|Gulf Arabic |Afro-Asiatic | afb | https://github.com/unimorph/afb/  |Salam Khalifa and Nizar Habash  |
+|Modern Standard Arabic |Afro-Asiatic | ara | https://github.com/unimorph/ara| Salam Khalifa and Nizar Habash  |
+|Classic Syriac | Afro-Asiatic | syc | https://github.com/unimorph/syc| Charbel El-Khaissi   |
+|Hebrew (Vocalized) |Afro-Asiatic | heb | https://github.com/unimorph/heb| Omer Goldman   |
+|Amharic | Afro-Asiatic | amh| https://github.com/unimorph/amh| Michael Gasser   | 
+|Kunwinjku |Arnhem (AU) | gup | https://github.com/unimorph/gup| William Lane | 
+|Aymara |Aymaran | aym | https://github.com/unimorph/aym| Matt Coler, Eleanor Chodroff | 
+|Ashaninka |Arawakan | cni | https://github.com/unimorph/cni| Arturo Oncevay, Jaime Rafael Montoya Samame | 
+|Yanesha |Arawakan | ame | https://github.com/unimorph/ame| Arturo Oncevay, Gema Celeste Silva Villegas | 
+|Seneca |Iroquoian | see | https://github.com/unimorph/see| Zoey Liu, Richard J. Hatcher, Emily Prud'hommeaux | 
+|Sakha |Turkic | sah | https://github.com/unimorph/sah| Maria Ryskina | 
+|Tuvan |Turkic | tyv | https://github.com/unimorph/tyv| Maria Ryskina |
+|Itelmen |Chukotko-Kamchatkan | itl | https://github.com/unimorph/itl| Karina Mischenkova, Maria Ryskina | 
+|Chukchi |Chukotko-Kamchatkan | ckt | https://github.com/unimorph/ckt | Karina Mischenkova, Maria Ryskina | 
+|Evenki |Tungusic | evn | https://github.com/unimorph/evn| Elena Klyachko|
+|Central Kurdish (Sorani) |Indo-European | ckb | https://github.com/unimorph/ckb| Ali Salehi | 
+| Southern Kurdish (Kurdiy Xwarîn) |Indo-European | sdh | https://github.com/unimorph/sdh | Ali Salehi | 
+| Polish | Indo-European | pol | https://github.com/unimorph/pol | Witold Kieraś, Marcin Wolinski | 
+| Braj | Indo-European | bra | https://github.com/unimorph/bra |Ritesh Kumar | 
+| Magahi | Indo-European | mag | https://github.com/unimorph/mag | Ritesh Kumar | 
+| Indonesian | Austronesian| ind | https://github.com/unimorph/ind   | Clara Vania | 
+| Kodi | Austronesian| kod | https://github.com/unimorph/kod | Yustinus Ghanggo Ate | 
+| Eibela | Trans–New Guinea | ail | https://github.com/unimorph/ail | Grant Aiton |
+| Veps | Uralic | vep | https://github.com/unimorph/vep | Andrew and Natalia Krizhanovsky | 
+| Karelian | Uralic | krl | https://github.com/unimorph/krl | Andrew and Natalia Krizhanovsky | 
+
+Organizers: Tiago Pimentel, Brian Leonard, Eleanor Chodroff,  Maria Ryskina, Sabrina Mielke, Garrett Nicolai, Yustinus Ghanggo Ate, Francis Tyers, Edoardo M. Ponti, Niklas Stoehr, Ritesh Kumar, Kairit Sirts, Zoey Liu, Mans Hulden, David Yarowsky, Ryan Cotterell, Ekaterina Vylomova, Ben Ambridge
+
+Annotators: Salam Khalifa, Nizar Habash, Charbel El-Khaissi, Omer Goldman, Michael Gasser, William Lane, Matt Coler, Arturo Oncevay, Jaime Rafael Montoya Samame, Gema Celeste Silva Villegas, Zoey Liu, Richard J. Hatcher, Emily Prud'hommeaux, Maria Ryskina, Karina Mischenkova, Elena Klyachko, Ali Salehi, Andrew and Natalia Krizhanovsky, Ritesh Kumar, Clara Vania, Yustinus Ghanggo Ate, Witold Kieraś, Marcin Wolinski, Totok Suhardijanto, Zahroh Nuriah, Mohit Raj, Shyam Ratan
+
+
 
 ### Part 2: Human-like Generalization
 
