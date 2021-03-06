@@ -186,8 +186,8 @@ fink  funk    V;PST   1.5
 
 where the fourth column is a native-speaker rating on a [Likert scale](https://en.wikipedia.org/wiki/Likert_scale). As stated above, these rankings were given by native speakers on Amazon’s Mechanical Turk. 
 
-The task will be evaluated in the following manner. Having trained a model on the training data, the participants are asked to provide scores for each inflection of the novel word. For instance, if the model is probabilistic (which is not a requirement!), the participants are asked to provide -log(finking | fink, V;V.PTCP;PRS) and -log(fank | fink, V;V.PTCP;PRS) for the examples above.
-For each wug lemma a micro-correlation is computed ([Spearman's ρ](https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient)). Then, a macro-average is computed by averaging the micro-correlations. Systems will be ranked by the final macro-average. A script will be provided for system evaluation. 
+The task will be evaluated in the following manner. Having trained a model on the training data, the participants are asked to provide scores for each inflection of the novel word. For instance, if the model is probabilistic (which is not a requirement!), the participants could provide the negative log-probability of each inflection under their model. For example, in the example above, the particpants could provide -log(finked | fink, V;V.PTCP;PRS), -log(fank | fink, V;V.PTCP;PRS) and  -log(funk | fink, V;V.PTCP;PRS).
+For each wug lemma, e.g. "fink", a micro-correlation is computed using ([Spearman's ρ](https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient)). Then, a macro-average is computed by averaging the micro-correlations. Systems will be ranked by the final macro-average. A script will be provided for system evaluation. 
 
 ### Organizers
 
