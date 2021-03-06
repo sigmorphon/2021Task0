@@ -1,15 +1,20 @@
 # Task0: SIGMORPHON–UniMorph Shared Task on Generalization in Morphological Inflection Generation
 
-SIGMORPHON’s sixth installment of its inflection generation shared task focuses on two aspects: (a) generalization across typologically diverse languages;  (b) cognitive plausibility of morphological inflection systems.
+SIGMORPHON’s sixth installment of its inflection generation shared task focuses on two aspects: 
+
+1. Generalization across typologically diverse languages
+2. Cognitive plausibility of morphological inflection systems
 
 Please join our [Google Group](https://groups.google.com/forum/#!forum/sigmorphon2021-sharedtask0/join) to stay up to date.
 
 [Register for the task!](https://forms.gle/tu4tX648F9kA9eps7)
 
+
 ## Part 1: Generalization across Languages
 
 
 ### Task Description
+
 
 In this shared task, participants will design a model that learns to generate morphological inflections from a lemma and a set of morphosyntactic features of the target form. Each language in the task has its own training, development, and test splits. Training and development splits contain triples, each consisting of a lemma, a target form, and a set of morphological features, provided in the UniMorph format (the “Data” section below provides an example of input format). Test splits only provide lemmas and morphological tags: your model will need to predict the missing target form.
 
@@ -18,6 +23,7 @@ The model should be general enough to work for natural languages of any typologi
 The task will be divided in two parts, the first forcuses on the inflection models' generalization across typologically diverse languages, while the second focuses on how human-like their generalization is (i.e. how cognitively plausible their outputs are).
 
 
+#### Overview
 This task will proceed in three phases: a Development Phase, a Generalization Phase, and an Evaluation Phase. As the task progresses, more data and more languages will be released.
 
 In the Development Phase, we will provide training and development splits that should be used to *develop* your system.
@@ -26,6 +32,7 @@ We will refer to them as the *development languages*. The list of languages will
 In the Generalization Phase, we will provide training and development splits for new languages where approximately half are genetically related (belong to the same family) and half are genetically *unrelated* (are isolates or belong to a different family) to the development languages. We will keep the languages in the Generalization Phase a surprise until April 2021. We will also keep the genetically unrelated language *families* a surprise, though some languages will come from the same families as those in the Development Phase.
 
 In the Evaluation Phase, the participants’ models will be evaluated on held-out forms from all of the languages from the previous phases. The languages from the Development Phase and the Generalization Phase are evaluated simultaneously. The only difference is that there has been more time to construct a model for those languages released in the Development Phase. It follows that a model could easily overfit to or favor phenomena that are more frequent in languages presented in the Development Phase, especially if parameters are shared across languages. For instance, a model based on the morphological patterning of the Indo-European languages may end up with a bias towards suffixing and will struggle to learn prefixing or circumfixation, the degree to which only becomes apparent during experimentation on other languages whose inflectional morphology patterns differ. Of course, the model architecture itself could explicitly or implicitly favor certain word formation types (suffixing, prefixing, etc.).
+
 
 #### Development Languages
 
@@ -68,12 +75,12 @@ Annotators: Salam Khalifa, Nizar Habash, Charbel El-Khaissi, Omer Goldman, Micha
 
 
 ### Timeline
-(Estimated Dates)
+
 
 **Stage 1: Development Phase**
-* February TBA, 2021: Training and development splits for development languages released; we invite participants to report errors.
-* February TBA, 2021: Neural and non-neural baselines for development languages released.
-* March 1, 2021: Development language data are frozen.
+* February 28, 2021: Training and development splits for development languages released; we invite participants to report errors.
+* February 28, 2021: Neural and non-neural baselines for development languages released.
+* March 6, 2021: Development language data are frozen. (may be updated.)
 
 **Stage 2: Generalization Phase**
 * April 20, 2021: Training and development splits for surprise languages released.
@@ -83,13 +90,13 @@ Annotators: Salam Khalifa, Nizar Habash, Charbel El-Khaissi, Omer Goldman, Micha
 * April 27, 2021: Test splits for all languages (both development and surprise) released.
 * May 4, 2021: Participants submit test predictions on all languages.
 
-
 **Stage 4: Write-up Phase**
 * May 8, 2021: Participants’ system description papers due.
 * May 15, 2021: Participants’ system description papers camera ready due.
 
 
-### Data
+#### Data
+
 The training and development data are provided in a simple utf-8 encoded text format for both the development and surprise languages. Each line in a file is an example that consists of word forms and corresponding morphosyntactic descriptions (MSDs) provided as a set of features, separated by semicolons. We refer to the MSDs as (morphological) tags for simplicity. The fields on a line are TAB-separated.
 The fields are: lemma, target form, tag. Here we present an example from the Akan training data (the Akan verb “bisa” means “to ask” in English):
 
@@ -101,9 +108,8 @@ In the training data, we give all three fields. In the test phase, we omit field
 
 We will provide varying amounts of labeled training data, depending on the language, to assess models’ ability to generalize to novel forms, in addition to information about each language’s family and sub-family, and WALS features which participants may optionally use. For each language, the possible inflections are taken from a finite set of morphological tags, presented in the UniMorph schema.
 
+#### Evaluation
 
-
-### Evaluation
 
 The language generalization evaluation will follow last year's design. We will simultaneously evaluate models for both the Development languages, whose training and development sets will be available for an elongated period of time, and the Surprise languages, whose training and development sets will only be available for a short time prior to submission, which precludes extensive tuning. To be officially ranked, you must submit results for **all** evaluation languages. Thus, to succeed, your class of models (e.g. neural sequence-to-sequence models or weighted finite-state transducers with hand-crafted features) must generalize well to the group of Surprise languages that are typologically distinct from the Development languages you performed model selection on. To repeat: This is not a zero-shot learning task, but rather our evaluation set-up is designed to test the inherent inductive bias in the participants' chosen model class.
 
@@ -112,7 +118,7 @@ We will simultaneously evaluate the accuracy on held-out forms for languages fro
 The human-like generalization part of this shared task will be evaluated based on a morphological inflection system's output correlation with both human plausibility scores and production probabilities. These outputs will be evaluated at multiple data glanuralities. They will be separately evaluated based on wugs which are similar to regular existing words, similar to irregulars, to both, or to neither.
 
 
-### Baselines
+#### Baselines
 
 The organizers will provide one neural baseline for the participants’ consumption.
 Its use is optional and is provided to help the participants develop their own models faster.
@@ -126,24 +132,34 @@ Vaswani et al. [“Attention is All You Need.”](https://papers.nips.cc/paper/7
 
 
 
-## Part 2: Are We There Yet? A Shared Task on Cognitively Plausible Morphological Inflection
+### Part 2: Are We There Yet?[^1] A Shared Task on Cognitively Plausible Morphological Inflection
+
+#### Task Description
+An open question in the use of neural networks for the study of language is to what degree they resemble human-like language production. In the realm of morphology, this question goes back 40 years to the infamous past-tense debate of the 1980s where one camp argued humans use rule-based mechanisms and another argued that humans inflect words with a process closer to neural networks. See Gary Marcus’ book [The Algebraic Mind](https://mitpress.mit.edu/books/algebraic-mind) for an overview or several recent papers in the ACL community on the topic, e.g. [Kirov and Cotterell (2019)](https://arxiv.org/abs/1807.04783), [Corkery et al. (2019)](https://arxiv.org/abs/1906.01280) and [McCurdy et al. (2020)](https://www.aclweb.org/anthology/2020.acl-main.159/). 
 
 
-An open question in the use of neural networks for the study of language is to what degree they resemble human-like language production. In the realm of morphology, this question goes back 40 years to the infamous past-tense debate of the 1980s where one camp argued humans use rule-based mechanisms and another argued that humans inflect words with a process closer to neural networks. See Gary Marcus’ book The Algebraic Mind for an overview or several recent papers in the ACL community on the topic, e.g. Kirov and Cotterell (2019), Corkery et al. (2019) and McCurdy et al. (2020). 
+This shared task adopts the experimental paradigm introduced by [Albright and Hayes (2003)](https://linguistics.ucla.edu/people/hayes/papers/AlbrightHayes2003RulesVsAnalogy.pdf). In four languages (English, German, Portuguese and Russian) we have created a large number of new nonce words. To the best of our knowledge, this will be the largest and most multilingual collection of nonce words in existence. The goal of the participants in the shared task is to design a model that morphologically inflects the nonce words according to the grammar of the given languages. As an example, consider the following nonce verbs that obey English phonotactics:
 
-This shared task adopts the experimental paradigm introduced by Albright and Hayes (2003). In four languages (English, German, Portuguese and Russian) we have created a large number of new nonce words. To the best of our knowledge, this will be the largest and most multilingual collection of nonce words in existence. The goal of the participants in the shared task is to design a model that morphologically inflects the nonce words according to the grammar of the given languages. As an example, consider the following nonce verbs that obey English phonotactics:
-blad /blæd/
-crast /kɹæst/
-flink /flɪŋk/
-pide /paɪd/
-sprake /spɹeɪk/
-In many cases, there is arguably more than one “correct” way to inflect these verbs according to English grammar because they are unattested. For instance, who is to say that the past tense of “fink” should be “finked” and not “fank”. For that reason, we have elicited human judgements (on Amazon’s Mechanical Turk) that tell native speakers’ preferences towards specific past tense inflections. The candidate set of potential inflections were generated through a linguist-in-the-loop procedure that made use of the state-of-the-art neural inflector from Wu et al. (2021). 
++ blad /blæd/
++ crast /kɹæst/
++ flink /flɪŋk/
++ pide /paɪd/
++ sprake /spɹeɪk/
 
-### Task Details
+In many cases, there is arguably more than one “correct” way to inflect these verbs according to English grammar because they are unattested. For instance, who is to say that the past tense of “fink” should be “finked” and not “fank”. For that reason, we have elicited human judgements (on [Amazon’s Mechanical Turk](https://www.mturk.com/) that tell native speakers’ preferences towards specific past tense inflections. The candidate set of potential inflections were generated through a linguist-in-the-loop procedure that made use of the state-of-the-art neural inflector from [Wu et al. (2021)](https://arxiv.org/abs/2005.10213). 
+
+#### Timeline for Part 2
+
+* February 25th, 2021: Training data for English, German, Portuguese and Russian are released. In contrast to previous year’s shared tasks, the data are in IPA. We invite participants to report errors.
+* March 8th, 2021: Neural and non-neural baselines for development languages released.
+* May 1st, 2021: Development data for nonce inflections is released. (This includes human judgements.)
+* May 23rd, 2021: Test data for the nonce inflection is released. (This includes human judgements.)
+* June 1th, 2021: Users submit their system output.
+* June 7th, 2021: Users submit their system description paper. 
 
 #### Data
 
-The training data are attested inflections in four languages (English, German, Portuguese and Russian) in. You may download them here. The data are in the standard UniMorph triple file format:
+The training data are attested inflections in four languages (English, German, Portuguese and Russian) in. You may download them [here](https://github.com/sigmorphon/2021Task0/tree/main/part2). The data are in the standard UniMorph triple file format:
 
 
 <div class="language-plaintext highlighter-rouge">
@@ -153,41 +169,40 @@ The training data are attested inflections in four languages (English, German, P
 </div>
 
 
+In contrast to the example above, the words are encoded in the [International Phonetic Alphabet (IPA)](https://en.wikipedia.org/wiki/International_Phonetic_Alphabet#:~:text=The%20International%20Phonetic%20Alphabet%20(IPA,speech%20sounds%20in%20written%20form.) not in the standard orthography for the given language. 
 
-
-
-
-
-In contrast to the example above, the words are encoded in the international phonetic alphabet (IPA) not in the standard orthography for the given language. 
-
-The development and test data are in a different format. They are quadruples 
+The **development** and **test data** are in a different format. They are quadruples 
 
 <div class="language-plaintext highlighter-rouge">
-<pre class="highlight"><code>fink finked V;PST 3.2</code>
-<pre class="highlight"><code>fink fank V;PST 4.1</code>
+<div class="highlight">
+<pre class="highlight"><code>fink finked V;PST 3.2</code></pre>
+<pre class="highlight"><code>fink fank V;PST 4.1</code></pre>
 <pre class="highlight"><code>fink funk V;PST 1.7</code></pre>
+
 </div>
-where the fourth column is a native-speaker rating on a Likert scale. As stated above, these rankings were given by native speakers on Amazon’s Mechanical Turk. 
+</div>
+where the fourth column is a native-speaker rating on a [Likert scale](https://en.wikipedia.org/wiki/Likert_scale). As stated above, these rankings were given by native speakers on Amazon’s Mechanical Turk. 
 
 #### Evaluation
 
 The task is evaluated in the following manner. Having trained a model on the training data, the participants are asked to provide scores for each inflection of the novel word. For instance, if the model is probabilistic (which is not a requirement!), the participants are asked to provide -log(finking | fink, V;V.PTCP;PRS) and -log(fank | fink, V;V.PTCP;PRS) for the examples above.
-For each wug lemma a micro-correlation is computed (Spearman's ρ). Then, a macro-average is computed by averaging the micro-correlations. Systems will be ranked by the final macro-average. A script will be provided for system evaluation. 
+For each wug lemma a micro-correlation is computed ([Spearman's ρ](https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient)). Then, a macro-average is computed by averaging the micro-correlations. Systems will be ranked by the final macro-average. A script will be provided for system evaluation. 
 
-### Timeline
-February 25th, 2021: Training data for English, German, Portuguese and Russian are released. In contrast to previous year’s shared tasks, the data are in IPA. We invite participants to report errors.
-March 8th, 2021: Neural and non-neural baselines for development languages released.
-May 1st, 2021: Development data for nonce inflections is released. (This includes human judgements.)
-May 23rd, 2021: Test data for the nonce inflection is released. (This includes human judgements.)
-June 1th, 2021: Users submit their system output.
-June 7th, 2021: Users submit their system description paper. 
-Organizers
-Tiago Pimentel (University of Cambridge) 
-Brian Leonard (Brian Leonard Consulting)
-Maria Ryskina (Carnegie Mellon University)
-Sabrina Mielke (Johns Hopkins University)
-Eleanor Chodroff (University of York)
-Ryan Cotterell (ETH Zürich)
-Ekaterina Vylomova (University of Melbourne)
-Ben Ambridge (University of Liverpool)
+
+
+### Organizers
+
+* Tiago Pimentel (University of Cambridge) 
+* Brian Leonard (Brian Leonard Consulting)
+* Maria Ryskina (Carnegie Mellon University)
+* Sabrina Mielke (Johns Hopkins University)
+* Eleanor Chodroff (University of York)
+* Ryan Cotterell (ETH Zürich)
+* Ekaterina Vylomova (University of Melbourne)
+* Ben Ambridge (University of Liverpool)
+
+[^1]: Our title is inspired (i.e. taken from) a related paper by [Corkery et al. (2019)](https://arxiv.org/abs/1906.01280).
+
+
+
 
