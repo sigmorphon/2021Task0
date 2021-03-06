@@ -2,15 +2,15 @@
 
 SIGMORPHON’s sixth installment of its inflection generation shared task will be divided into two parts: 
 
-+ ***Part 1***: [Generalization Across Typologically Diverse Languages](https://github.com/sigmorphon/2021Task0/blob/main/README.md#part-1-generalization-across-languages)
-+ ***Part 2***: [Are We There Yet?<sup>1</sup> A Shared Task on Cognitively Plausible Morphological Inflection](https://github.com/sigmorphon/2021Task0/blob/main/README.md#part-2-are-we-there-yet1-a-shared-task-on-cognitively-plausible-morphological-inflection)
++ ***Part 1***: Generalization across typologically diverse languages
++ ***Part 2***: Cognitive plausibility of morphological inflection systems
 
 Please join our [Google Group](https://groups.google.com/forum/#!forum/sigmorphon2021-sharedtask0/join) to stay up to date.
 
 [Register for the task!](https://forms.gle/tu4tX648F9kA9eps7)
 
 
-## Part 1: Generalization Across Typologically Diverse Languages
+## Part 1: Generalization across Languages
 
 
 ### Task Description
@@ -78,21 +78,21 @@ Annotators: Salam Khalifa, Nizar Habash, Charbel El-Khaissi, Omer Goldman, Micha
 
 
 **Stage 1: Development Phase**
-* February 28, 2021: Training and development splits for development languages released; we invite participants to report errors.
-* February 28, 2021: Neural and non-neural baselines for development languages released.
-* March 6, 2021: Development language data are frozen. (may be updated.)
+* ***February 28, 2021***: Training and development splits for development languages released; we invite participants to report errors.
+* ***February 28, 2021***: Neural and non-neural baselines for development languages released.
+* ***March 6, 2021***: Development language data are frozen. (may be updated.)
 
 **Stage 2: Generalization Phase**
-* April 20, 2021: Training and development splits for surprise languages released.
+* ***April 20, 2021***: Training and development splits for surprise languages released.
 (This is not a zero-shot learning task. Participants will be given training data for all languages.)
 
 **Stage 3: Evaluation Phase**
-* April 27, 2021: Test splits for all languages (both development and surprise) released.
-* May 4, 2021: Participants submit test predictions on all languages.
+* ***April 27, 2021***: Test splits for all languages (both development and surprise) released.
+* ***May 4, 2021***: Participants submit test predictions on all languages.
 
 **Stage 4: Write-up Phase**
-* May 8, 2021: Participants’ system description papers due.
-* May 15, 2021: Participants’ system description papers camera ready due.
+* ***May 8, 2021***: Participants’ system description papers due.
+* ***May 15, 2021***: Participants’ system description papers camera ready due.
 
 
 ### Data
@@ -132,10 +132,10 @@ Vaswani et al. [“Attention is All You Need.”](https://papers.nips.cc/paper/7
 
 
 
-## Part 2: Are We There Yet? A Shared Task on Cognitively Plausible Morphological Inflection
+## Part 2: Are We There Yet?<sup>1</sup> A Shared Task on Cognitively Plausible Morphological Inflection
 
 ### Task Description
-An open question in the use of neural networks for the study of language is to what degree they resemble human-like language production. In the realm of morphology, this question goes back 40 years to the infamous past-tense debate of the 1980s where one camp argued humans use rule-based mechanisms and another argued that humans inflect words with a process closer to neural networks. See Gary Marcus’ book [The Algebraic Mind](https://mitpress.mit.edu/books/algebraic-mind) for an overview or several recent papers in the ACL community on the topic, e.g. [Kirov and Cotterell (2019)](https://arxiv.org/abs/1807.04783), [Corkery et al. (2019)](https://arxiv.org/abs/1906.01280) and [McCurdy et al. (2020)](https://www.aclweb.org/anthology/2020.acl-main.159/). 
+An open question in the use of neural networks for the study of language is to what degree they resemble human-like language production. In the realm of morphology, this question goes back 40 years to the infamous past-tense debate of the 1980s where one camp argued humans use rule-based mechanisms and another argued that humans inflect words with a process closer to neural networks. See Gary Marcus’ book [The Algebraic Mind](https://mitpress.mit.edu/books/algebraic-mind) for an overview or several recent papers in the ACL community on the topic, e.g. [Kirov and Cotterell (2018)](https://arxiv.org/abs/1807.04783), [Corkery et al. (2019)](https://arxiv.org/abs/1906.01280) and [McCurdy et al. (2020)](https://www.aclweb.org/anthology/2020.acl-main.159/). 
 
 
 This shared task adopts the experimental paradigm introduced by [Albright and Hayes (2003)](https://linguistics.ucla.edu/people/hayes/papers/AlbrightHayes2003RulesVsAnalogy.pdf). In four languages (English, German, Portuguese and Russian) we have created a large number of new nonce words. To the best of our knowledge, this will be the largest and most multilingual collection of nonce words in existence. The goal of the participants in the shared task is to design a model that morphologically inflects the nonce words according to the grammar of the given languages. As an example, consider the following nonce verbs that obey English phonotactics:
@@ -159,7 +159,7 @@ In many cases, there is arguably more than one “correct” way to inflect thes
 
 ### Data
 
-The training data are attested inflections in four languages (English, German, Portuguese and Russian) in. You may download them [here](https://github.com/sigmorphon/2021Task0/tree/main/part2). The data are in the standard UniMorph triple TSV file format [Kirov et al. 2018](https://arxiv.org/abs/1810.11101):
+The training data are attested inflections in four languages (English, German, Portuguese and Russian) in. You may download them [here](https://github.com/sigmorphon/2021Task0/tree/main/part2). The data are in the standard UniMorph triple file format:
 
 
 <div class="language-plaintext highlighter-rouge">
@@ -181,17 +181,12 @@ fink  funk    V;PST   1.5
 
 where the fourth column is a native-speaker rating on a [Likert scale](https://en.wikipedia.org/wiki/Likert_scale). As stated above, these rankings were given by native speakers on Amazon’s Mechanical Turk. 
 
-### Baselines
-
-The system of [Wu et al. (2021)](https://arxiv.org/abs/2005.10213) as well as non-neural system will be provided as baselines. 
-
 ### Evaluation
 
 The task is evaluated in the following manner. Having trained a model on the training data, the participants are asked to provide scores for each inflection of the novel word. For instance, if the model is probabilistic (which is not a requirement!), the participants are asked to provide -log(finking | fink, V;V.PTCP;PRS) and -log(fank | fink, V;V.PTCP;PRS) for the examples above.
-For each wug lemma a micro-correlation is computed ([Spearman's ρ](https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient)). Then, a macro-average is computed by averaging the micro-correlations. Systems will be ranked by the final macro-average. A script will be provided for system evaluation closer to the submission date. 
+For each wug lemma a micro-correlation is computed ([Spearman's ρ](https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient)). Then, a macro-average is computed by averaging the micro-correlations. Systems will be ranked by the final macro-average. A script will be provided for system evaluation. 
 
-
-### Organizers
+#### Organizers
 
 * Tiago Pimentel (University of Cambridge) 
 * Brian Leonard (Brian Leonard Consulting)
@@ -203,9 +198,24 @@ For each wug lemma a micro-correlation is computed ([Spearman's ρ](https://en.w
 * Ben Ambridge (University of Liverpool)
 
 
-
-
 ### References
+
+
+Albright, A., & Hayes, B. (2003). [Rules vs. analogy in English past tenses: A computational/experimental study](https://linguistics.ucla.edu/people/hayes/papers/AlbrightHayes2003RulesVsAnalogy.pdf). Cognition, 90(2), 119-161.
+
+Marcus, G. F. (2001). [The Algebraic Mind: Integrating Connectionism and Cognitive Science](https://mitpress.mit.edu/books/algebraic-mind). MIT Press.
+
+Corkery, M., Matusevych, Y., & Goldwater, S. (2019). [Corkery et al. (2019)](https://arxiv.org/abs/1906.01280). Proceedings of ACL 2019.
+
+Kirov, C. and Cotterell, R. (2018). [Recurrent Neural Networks in Linguistic Theory: Revisiting Pinker and Prince (1988) and the Past Tense Debate](https://arxiv.org/abs/1807.04783). TACL 2018. 
+
+Kirov, C., Cotterell, R., Sylak-Glassman, J., Walther, G., Vylomova, E., Xia, P., Faruqui, M., Mielke, S., McCarthy, A., Kübler, S., Yarowsky, D., Eisner, J., and Hulden, M. (2018). [UniMorph 2.0: Universal Morphology](https://arxiv.org/abs/1810.11101). Proceedings of LREC 2018. 
+
+McCurdy, K., Goldwater, S., and Lopez, A. (2020). [Inflecting When There’s No Majority: Limitations of Encoder-Decoder Neural Networks as Cognitive Models for German Plurals](https://www.aclweb.org/anthology/2020.acl-main.159/). Proceedings of ACL 2020.
+
+Wu, S., Cotterell, R., and Hulden, M. (2021). [Applying the Transformer to Character-level Transduction](https://arxiv.org/abs/2005.10213). Proceedings of EACL 2021.
+
+
 
 <sup>1</sup>Our title is inspired (i.e. taken from) a related paper by [Corkery et al. (2019)](https://arxiv.org/abs/1906.01280).
 
