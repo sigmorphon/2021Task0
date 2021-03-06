@@ -7,7 +7,7 @@ SIGMORPHON’s sixth installment of its inflection generation shared task focuse
 
 Please join our [Google Group](https://groups.google.com/forum/#!forum/sigmorphon2021-sharedtask0/join) to stay up to date.
 
-[Register for the task!](https://forms.gle/tu4tX648F9kA9eps7)
+Sign up here to [register for the task!](https://forms.gle/tu4tX648F9kA9eps7)
 
 
 ## Part 1: Generalization across Languages
