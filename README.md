@@ -186,6 +186,18 @@ where the fourth column is a native-speaker rating on a [Likert scale](https://e
 The task is evaluated in the following manner. Having trained a model on the training data, the participants are asked to provide scores for each inflection of the novel word. For instance, if the model is probabilistic (which is not a requirement!), the participants are asked to provide -log(finking | fink, V;V.PTCP;PRS) and -log(fank | fink, V;V.PTCP;PRS) for the examples above.
 For each wug lemma a micro-correlation is computed ([Spearman's ρ](https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient)). Then, a macro-average is computed by averaging the micro-correlations. Systems will be ranked by the final macro-average. A script will be provided for system evaluation. 
 
+#### Organizers
+
+* Tiago Pimentel (University of Cambridge) 
+* Brian Leonard (Brian Leonard Consulting)
+* Maria Ryskina (Carnegie Mellon University)
+* Sabrina Mielke (Johns Hopkins University)
+* Eleanor Chodroff (University of York)
+* Ryan Cotterell (ETH Zürich)
+* Ekaterina Vylomova (University of Melbourne)
+* Ben Ambridge (University of Liverpool)
+
+
 ### References
 
 
@@ -203,21 +215,7 @@ McCurdy, K., Goldwater, S., and Lopez, A. (2020). [Inflecting When There’s No 
 
 Wu, S., Cotterell, R., and Hulden, M. (2021). [Applying the Transformer to Character-level Transduction](https://arxiv.org/abs/2005.10213). Proceedings of EACL 2021.
 
-#### Organizers
 
-* Tiago Pimentel (University of Cambridge) 
-* Brian Leonard (Brian Leonard Consulting)
-* Maria Ryskina (Carnegie Mellon University)
-* Sabrina Mielke (Johns Hopkins University)
-* Eleanor Chodroff (University of York)
-* Ryan Cotterell (ETH Zürich)
-* Ekaterina Vylomova (University of Melbourne)
-* Ben Ambridge (University of Liverpool)
-
-
-
-#### References
 
 <sup>1</sup>Our title is inspired (i.e. taken from) a related paper by [Corkery et al. (2019)](https://arxiv.org/abs/1906.01280).
-
 
