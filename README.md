@@ -1,10 +1,14 @@
 # Task0: SIGMORPHON–UniMorph Shared Task on Generalization in Morphological Inflection Generation
 
-SIGMORPHON’s sixth installment of its inflection generation shared task focuses on two aspects: (a) generalization across typologically diverse languages;  (b) cognitive plausibility of morphological inflection systems.
+SIGMORPHON’s sixth installment of its inflection generation shared task focuses on two aspects: 
+
+1. Generalization across typologically diverse languages
+2. Cognitive plausibility of morphological inflection systems
 
 Please join our [Google Group](https://groups.google.com/forum/#!forum/sigmorphon2021-sharedtask0/join) to stay up to date.
 
 [Register for the task!](https://forms.gle/tu4tX648F9kA9eps7)
+
 
 ## Shared Task Description
 
@@ -16,6 +20,7 @@ The task will be divided in two parts, the first forcuses on the inflection mode
 
 ### Part 1: Generalization across Languages
 
+#### Overview
 This task will proceed in three phases: a Development Phase, a Generalization Phase, and an Evaluation Phase. As the task progresses, more data and more languages will be released.
 
 In the Development Phase, we will provide training and development splits that should be used to *develop* your system.
@@ -25,76 +30,13 @@ In the Generalization Phase, we will provide training and development splits for
 
 In the Evaluation Phase, the participants’ models will be evaluated on held-out forms from all of the languages from the previous phases. The languages from the Development Phase and the Generalization Phase are evaluated simultaneously. The only difference is that there has been more time to construct a model for those languages released in the Development Phase. It follows that a model could easily overfit to or favor phenomena that are more frequent in languages presented in the Development Phase, especially if parameters are shared across languages. For instance, a model based on the morphological patterning of the Indo-European languages may end up with a bias towards suffixing and will struggle to learn prefixing or circumfixation, the degree to which only becomes apparent during experimentation on other languages whose inflectional morphology patterns differ. Of course, the model architecture itself could explicitly or implicitly favor certain word formation types (suffixing, prefixing, etc.).
 
-#### Development Languages
-
-| Language | Family| code | UM | Annotators  | 
-|---|---|---|---|---|
-|Egyptian Arabic |Afro-Asiatic | arz  | https://github.com/unimorph/arz/  | Salam Khalifa and Nizar Habash  |
-|Gulf Arabic |Afro-Asiatic | afb | https://github.com/unimorph/afb/  |Salam Khalifa and Nizar Habash  |
-|Modern Standard Arabic |Afro-Asiatic | ara | https://github.com/unimorph/ara| Salam Khalifa and Nizar Habash  |
-|Classic Syriac | Afro-Asiatic | syc | https://github.com/unimorph/syc| Charbel El-Khaissi   |
-|Hebrew (Vocalized) |Afro-Asiatic | heb | https://github.com/unimorph/heb| Omer Goldman   |
-|Amharic | Afro-Asiatic | amh| https://github.com/unimorph/amh| Michael Gasser   | 
-|Kunwinjku |Arnhem (AU) | gup | https://github.com/unimorph/gup| William Lane | 
-|Aymara |Aymaran | aym | https://github.com/unimorph/aym| Matt Coler, Eleanor Chodroff | 
-|Ashaninka |Arawakan | cni | https://github.com/unimorph/cni| Arturo Oncevay, Jaime Rafael Montoya Samame | 
-|Yanesha |Arawakan | ame | https://github.com/unimorph/ame| Arturo Oncevay, Gema Celeste Silva Villegas | 
-|Seneca |Iroquoian | see | https://github.com/unimorph/see| Zoey Liu, Richard J. Hatcher, Emily Prud'hommeaux | 
-|Sakha |Turkic | sah | https://github.com/unimorph/sah| Maria Ryskina | 
-|Tuvan |Turkic | tyv | https://github.com/unimorph/tyv| Maria Ryskina |
-|Itelmen |Chukotko-Kamchatkan | itl | https://github.com/unimorph/itl| Karina Mischenkova, Maria Ryskina | 
-|Chukchi |Chukotko-Kamchatkan | ckt | https://github.com/unimorph/ckt | Karina Mischenkova, Maria Ryskina | 
-|Evenki |Tungusic | evn | https://github.com/unimorph/evn| Elena Klyachko|
-|Central Kurdish (Sorani) |Indo-European | ckb | https://github.com/unimorph/ckb| Ali Salehi | 
-| Southern Kurdish (Kurdiy Xwarîn) |Indo-European | sdh | https://github.com/unimorph/sdh | Ali Salehi | 
-| Polish | Indo-European | pol | https://github.com/unimorph/pol | Witold Kieraś, Marcin Wolinski | 
-| Russian | Indo-European | rus | https://github.com/unimorph/rus | Wiktionary | 
-| Czech | Indo-European | ces | https://github.com/unimorph/ces | Wiktionary| 
-| Braj | Indo-European | bra | https://github.com/unimorph/bra |Ritesh Kumar | 
-| Magahi | Indo-European | mag | https://github.com/unimorph/mag | Ritesh Kumar | 
-| Indonesian | Austronesian| ind | https://github.com/unimorph/ind   | Clara Vania | 
-| Kodi | Austronesian| kod | https://github.com/unimorph/kod | Yustinus Ghanggo Ate | 
-| Eibela | Trans–New Guinea | ail | https://github.com/unimorph/ail | Grant Aiton |
-| Veps | Uralic | vep | https://github.com/unimorph/vep | Andrew and Natalia Krizhanovsky | 
-| Karelian | Uralic | krl | https://github.com/unimorph/krl | Andrew and Natalia Krizhanovsky | 
-| Ludic | Uralic | lud | https://github.com/unimorph/lud | Andrew and Natalia Krizhanovsky | 
-| Livvi | Uralic | olo | https://github.com/unimorph/olo | Andrew and Natalia Krizhanovsky | 
-
-Organizers: Tiago Pimentel, Brian Leonard, Eleanor Chodroff,  Maria Ryskina, Sabrina Mielke, Garrett Nicolai, Yustinus Ghanggo Ate, Francis Tyers, Edoardo M. Ponti, Niklas Stoehr, Ritesh Kumar, Kairit Sirts, Zoey Liu, Mans Hulden, David Yarowsky, Ryan Cotterell, Ekaterina Vylomova, Ben Ambridge
-
-Annotators: Salam Khalifa, Nizar Habash, Charbel El-Khaissi, Omer Goldman, Michael Gasser, William Lane, Matt Coler, Arturo Oncevay, Jaime Rafael Montoya Samame, Gema Celeste Silva Villegas, Zoey Liu, Richard J. Hatcher, Emily Prud'hommeaux, Maria Ryskina, Karina Mischenkova, Elena Klyachko, Ali Salehi, Andrew and Natalia Krizhanovsky, Ritesh Kumar, Clara Vania, Yustinus Ghanggo Ate, Witold Kieraś, Marcin Wolinski, Totok Suhardijanto, Zahroh Nuriah, Mohit Raj, Shyam Ratan
-
-
-
-### Part 2: Human-like Generalization
-
-We selected four high resource languages for this task with varying degrees of morphological complexity: English, German, Portuguese, and Russian.
-Systems will be trained on real words from these languages on the task of morphological inflection, but will then be evaluated on a selection of wug wordforms --- they will be compared to both human plausibility judgements and productions.
-
-For training models, we provide participants with inflection data from [UniMorph](https://unimorph.github.io/).
-The training data has been converted into phonemes and is composed of <lemma, inflected_form, inflection_tags> triples.
-
-The evaluation will be conducted on a new set of wug word forms.
-Wugs were generated in each language so as to cover a diverse subset of the language’s phonotactic space.
-The steps to generate these wugs were:
-1. Transduce Unimorph’s word lists into IPA using the baseline encoder-decoder from SIGMORPHON 2020 task 1 (https://github.com/sigmorphon/2020/tree/master/task1/baselines/encoder-decoder) , filtering out any word whose 'concept' has a zipf frequency of 3 or lower using the wordfreq package(https://doi.org/10.5281/zenodo.1443582)
-2. Choose a tagset in the given language that is likely to be irregular, e.g. V;PST in English or N;ACC;PL for German.
-3. Train an LSTM on each language, conditioning it on the inflection tag.
-4. Sample new wug lemmas from the LSTM, removing already existing word forms.
-5. Subsample a diverse set of wugs based on their likelihood to be irregular, lexical neighborhood, and phonotactic probability (this step relies on several factors and will be described in detail at a later point).
-6. Train a neural transducer on IPA UniMorph.
-7. Generate inflections for chosen wugs.
-
-We then presented inflections to a group of native speakers to get plausibility judgements, while we asked another group to inflect the lemmas directly to get production probabilities. We will later release a subset of this wug data so participants can validate their systems with them.
-
-
-## Timeline
+#### Timeline for Part 1
 (Estimated Dates)
 
 **Stage 1: Development Phase**
-* February TBA, 2021: Training and development splits for development languages released; we invite participants to report errors.
-* February TBA, 2021: Neural and non-neural baselines for development languages released.
-* March 1, 2021: Development language data are frozen.
+* February 28, 2021: Training and development splits for development languages released; we invite participants to report errors.
+* February 28, 2021: Neural and non-neural baselines for development languages released.
+* March 6, 2021: Development language data are frozen. (may be updated.)
 
 **Stage 2: Generalization Phase**
 * April 20, 2021: Training and development splits for surprise languages released.
@@ -104,13 +46,11 @@ We then presented inflections to a group of native speakers to get plausibility 
 * April 27, 2021: Test splits for all languages (both development and surprise) released.
 * May 4, 2021: Participants submit test predictions on all languages.
 
-
 **Stage 4: Write-up Phase**
 * May 8, 2021: Participants’ system description papers due.
 * May 15, 2021: Participants’ system description papers camera ready due.
 
-
-## Data
+#### Data
 The training and development data are provided in a simple utf-8 encoded text format for both the development and surprise languages. Each line in a file is an example that consists of word forms and corresponding morphosyntactic descriptions (MSDs) provided as a set of features, separated by semicolons. We refer to the MSDs as (morphological) tags for simplicity. The fields on a line are TAB-separated.
 The fields are: lemma, target form, tag. Here we present an example from the Akan training data (the Akan verb “bisa” means “to ask” in English):
 
@@ -122,9 +62,7 @@ In the training data, we give all three fields. In the test phase, we omit field
 
 We will provide varying amounts of labeled training data, depending on the language, to assess models’ ability to generalize to novel forms, in addition to information about each language’s family and sub-family, and WALS features which participants may optionally use. For each language, the possible inflections are taken from a finite set of morphological tags, presented in the UniMorph schema.
 
-
-
-## Evaluation
+#### Evaluation
 
 The language generalization evaluation will follow last year's design. We will simultaneously evaluate models for both the Development languages, whose training and development sets will be available for an elongated period of time, and the Surprise languages, whose training and development sets will only be available for a short time prior to submission, which precludes extensive tuning. To be officially ranked, you must submit results for **all** evaluation languages. Thus, to succeed, your class of models (e.g. neural sequence-to-sequence models or weighted finite-state transducers with hand-crafted features) must generalize well to the group of Surprise languages that are typologically distinct from the Development languages you performed model selection on. To repeat: This is not a zero-shot learning task, but rather our evaluation set-up is designed to test the inherent inductive bias in the participants' chosen model class.
 
@@ -133,14 +71,90 @@ We will simultaneously evaluate the accuracy on held-out forms for languages fro
 The human-like generalization part of this shared task will be evaluated based on a morphological inflection system's output correlation with both human plausibility scores and production probabilities. These outputs will be evaluated at multiple data glanuralities. They will be separately evaluated based on wugs which are similar to regular existing words, similar to irregulars, to both, or to neither.
 
 
-## Baselines
+#### Baselines
 
 The organizers will provide one neural baseline for the participants’ consumption.
 Its use is optional and is provided to help the participants develop their own models faster.
 This baseline is a multilingual transformer ([Vaswani et al., 2017](https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf)). The version of this model adopted for character-level tasks currently holds the state-of-the-art on the 2017 SIGMORPHON shared task data. The transformer takes the lemma and morphological tags as input and outputs the target inflection. Given the low-resource setup, a single model will be trained on all languages. Additionally, we consider the data augmentation technique used by [Anastasopoulos and Neubig (2019)](https://www.aclweb.org/anthology/D19-1091/) as another baseline.
+
+
+
+### Part 2: Are We There Yet?[^1] A Shared Task on Cognitively Plausible Morphological Inflection
+
+#### Overview
+An open question in the use of neural networks for the study of language is to what degree they resemble human-like language production. In the realm of morphology, this question goes back 40 years to the infamous past-tense debate of the 1980s where one camp argued humans use rule-based mechanisms and another argued that humans inflect words with a process closer to neural networks. See Gary Marcus’ book [The Algebraic Mind](https://mitpress.mit.edu/books/algebraic-mind) for an overview or several recent papers in the ACL community on the topic, e.g. [Kirov and Cotterell (2019)](https://arxiv.org/abs/1807.04783), [Corkery et al. (2019)](https://arxiv.org/abs/1906.01280) and [McCurdy et al. (2020)](https://www.aclweb.org/anthology/2020.acl-main.159/). 
+
+
+This shared task adopts the experimental paradigm introduced by [Albright and Hayes (2003)](https://linguistics.ucla.edu/people/hayes/papers/AlbrightHayes2003RulesVsAnalogy.pdf). In four languages (English, German, Portuguese and Russian) we have created a large number of new nonce words. To the best of our knowledge, this will be the largest and most multilingual collection of nonce words in existence. The goal of the participants in the shared task is to design a model that morphologically inflects the nonce words according to the grammar of the given languages. As an example, consider the following nonce verbs that obey English phonotactics:
+
++ blad /blæd/
++ crast /kɹæst/
++ flink /flɪŋk/
++ pide /paɪd/
++ sprake /spɹeɪk/
+
+In many cases, there is arguably more than one “correct” way to inflect these verbs according to English grammar because they are unattested. For instance, who is to say that the past tense of “fink” should be “finked” and not “fank”. For that reason, we have elicited human judgements (on [Amazon’s Mechanical Turk](https://www.mturk.com/) that tell native speakers’ preferences towards specific past tense inflections. The candidate set of potential inflections were generated through a linguist-in-the-loop procedure that made use of the state-of-the-art neural inflector from [Wu et al. (2021)](https://arxiv.org/abs/2005.10213). 
+
+#### Timeline for Part 2
+
+* February 25th, 2021: Training data for English, German, Portuguese and Russian are released. In contrast to previous year’s shared tasks, the data are in IPA. We invite participants to report errors.
+* March 8th, 2021: Neural and non-neural baselines for development languages released.
+* May 1st, 2021: Development data for nonce inflections is released. (This includes human judgements.)
+* May 23rd, 2021: Test data for the nonce inflection is released. (This includes human judgements.)
+* June 1th, 2021: Users submit their system output.
+* June 7th, 2021: Users submit their system description paper. 
+
+#### Data
+
+The training data are attested inflections in four languages (English, German, Portuguese and Russian) in. You may download them [here](https://github.com/sigmorphon/2021Task0/tree/main/part2). The data are in the standard UniMorph triple file format:
+
+
+<div class="language-plaintext highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>talk talking V;V.PTCP;PRS</code></pre>
+</div>
+</div>
+
+
+In contrast to the example above, the words are encoded in the [International Phonetic Alphabet (IPA)](https://en.wikipedia.org/wiki/International_Phonetic_Alphabet#:~:text=The%20International%20Phonetic%20Alphabet%20(IPA,speech%20sounds%20in%20written%20form.) not in the standard orthography for the given language. 
+
+The **development** and **test data** are in a different format. They are quadruples 
+
+<div class="language-plaintext highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>fink finked V;PST 3.2</code></pre>
+<pre class="highlight"><code>fink fank V;PST 4.1</code></pre>
+<pre class="highlight"><code>fink funk V;PST 1.7</code></pre>
+
+</div>
+</div>
+where the fourth column is a native-speaker rating on a [Likert scale](https://en.wikipedia.org/wiki/Likert_scale). As stated above, these rankings were given by native speakers on Amazon’s Mechanical Turk. 
+
+#### Evaluation
+
+The task is evaluated in the following manner. Having trained a model on the training data, the participants are asked to provide scores for each inflection of the novel word. For instance, if the model is probabilistic (which is not a requirement!), the participants are asked to provide -log(finking | fink, V;V.PTCP;PRS) and -log(fank | fink, V;V.PTCP;PRS) for the examples above.
+For each wug lemma a micro-correlation is computed ([Spearman's ρ](https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient)). Then, a macro-average is computed by averaging the micro-correlations. Systems will be ranked by the final macro-average. A script will be provided for system evaluation. 
+
+
+
+## Organizers
+
+* Tiago Pimentel (University of Cambridge) 
+* Brian Leonard (Brian Leonard Consulting)
+* Maria Ryskina (Carnegie Mellon University)
+* Sabrina Mielke (Johns Hopkins University)
+* Eleanor Chodroff (University of York)
+* Ryan Cotterell (ETH Zürich)
+* Ekaterina Vylomova (University of Melbourne)
+* Ben Ambridge (University of Liverpool)
+
+[^1]: Our title is inspired (i.e. taken from) a related paper by [Corkery et al. (2019)](https://arxiv.org/abs/1906.01280).
+
 
 ## References
 
 Anastasopoulos and Neubig. [“Pushing the Limits of Low-Resource Morphological Inflection.”](https://www.aclweb.org/anthology/D19-1091/) Proceedings of EMNLP 2019.
 
 Vaswani et al. [“Attention is All You Need.”](https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf) Proceedings of NeurIPS 2017.
+
+To be updated.
