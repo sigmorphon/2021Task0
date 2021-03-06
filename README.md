@@ -174,9 +174,9 @@ In contrast to the example above, the words are encoded in the [International Ph
 The **development** and **test data** are in a different format. They are quadruples 
 
 ````
-fink  finked  V;PST 3.2
-fink  fank    V;PST 4.1
-fink  funk    V;PST 1.5
+fink  finked  V;PST   3.2
+fink  fank    V;PST   4.1
+fink  funk    V;PST   1.5
 ````
 
 where the fourth column is a native-speaker rating on a [Likert scale](https://en.wikipedia.org/wiki/Likert_scale). As stated above, these rankings were given by native speakers on Amazon’s Mechanical Turk. 
