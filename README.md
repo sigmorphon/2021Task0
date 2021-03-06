@@ -138,10 +138,10 @@ Vaswani et al. [“Attention is All You Need.”](https://papers.nips.cc/paper/7
 ## Part 2: Are We There Yet?<sup>1</sup> A Shared Task on Cognitively Plausible Morphological Inflection
 
 ### Task Description
-An open question in the use of neural networks for the study of language is to what degree they resemble humans in now they generate language. In the realm of morphology, this question goes back 40 years to the infamous past-tense debate of the 1980s where one camp argued humans use rule-based mechanisms and another argued that humans inflect words with a process closer to neural networks. See Gary Marcus’ book [The Algebraic Mind](https://mitpress.mit.edu/books/algebraic-mind) for an overview or several recent papers in the ACL community on the topic, e.g. [Kirov and Cotterell (2018)](https://arxiv.org/abs/1807.04783), [Corkery et al. (2019)](https://arxiv.org/abs/1906.01280) and [McCurdy et al. (2020)](https://www.aclweb.org/anthology/2020.acl-main.159/). 
+An open question in the use of neural networks for the study of language is to what degree they resemble humans in how they generate language. In the realm of morphology, this question goes back 40 years to the infamous past-tense debate of the 1980s where one camp argued humans use rule-based mechanisms and another argued that humans inflect words with a process closer to neural networks. See Gary Marcus’ book [The Algebraic Mind](https://mitpress.mit.edu/books/algebraic-mind) for an overview or several recent papers in the ACL community on the topic, e.g. [Kirov and Cotterell (2018)](https://arxiv.org/abs/1807.04783), [Corkery et al. (2019)](https://arxiv.org/abs/1906.01280) and [McCurdy et al. (2020)](https://www.aclweb.org/anthology/2020.acl-main.159/). 
 
 
-This shared task adopts the experimental paradigm introduced by [Albright and Hayes (2003)](https://linguistics.ucla.edu/people/hayes/papers/AlbrightHayes2003RulesVsAnalogy.pdf). In four languages (English, German, Portuguese and Russian) we have created a large number of new nonce words. To the best of our knowledge, this will be the largest and most multilingual collection of nonce words in existence. The goal of the participants in the shared task is to design a model that morphologically inflects the nonce words according to the grammar of the given languages. As an example, consider the following nonce verbs that obey English phonotactics:
+This shared task adopts the experimental paradigm introduced by [Albright and Hayes (2003)](https://linguistics.ucla.edu/people/hayes/papers/AlbrightHayes2003RulesVsAnalogy.pdf). We have created a large number of new nonce words in four languages: English, German, Portuguese and Russian. To the best of our knowledge, this will be the largest and most multilingual collection of nonce words in existence. The goal of the participants in the shared task is to design a model that morphologically inflects the nonce words according to the grammar of the given languages. As an example, consider the following nonce verbs that obey English phonotactics:
 
 + blad /blæd/
 + crast /kɹæst/
@@ -184,8 +184,9 @@ fink  funk    V;PST   1.5
 
 where the fourth column is a native-speaker rating on a [Likert scale](https://en.wikipedia.org/wiki/Likert_scale). As stated above, these rankings were given by native speakers on Amazon’s Mechanical Turk. 
 
-The task will be evaluated in the following manner. Having trained a model on the training data, the participants are asked to provide scores for each inflection of the novel word. For instance, if the model is probabilistic (which is not a requirement!), the participants are asked to provide -log(finking | fink, V;V.PTCP;PRS) and -log(fank | fink, V;V.PTCP;PRS) for the examples above.
-For each wug lemma a micro-correlation is computed ([Spearman's ρ](https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient)). Then, a macro-average is computed by averaging the micro-correlations. Systems will be ranked by the final macro-average. A script will be provided for system evaluation. 
+The task will be evaluated in the following manner. Having trained a model on the training data, the participants are asked to provide model scores for each inflection of the novel word. For instance, if the model is probabilistic (which is not a requirement!), the participants could provide the negative log-probability of each inflection under their model. To use the example given above, the particpants could provide -log(finked | fink, V;V.PTCP;PRS), -log(fank | fink, V;V.PTCP;PRS) and  -log(funk | fink, V;V.PTCP;PRS).
+For each wug lemma, e.g. "fink", a micro-correlation is computed using ([Spearman's ρ](https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient)). Then, a macro-average is computed by averaging the micro-correlations. Systems will be ranked by the final macro-average. A script will be provided for system evaluation. 
+
 
 ### Organizers
 
