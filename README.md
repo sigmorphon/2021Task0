@@ -1,4 +1,4 @@
-# Task0: SIGMORPHON–UniMorph Shared Task on Generalization in Morphological Inflection Generation
+# SIGMORPHON–UniMorph Shared Task on Generalization in Morphological Inflection Generation
 
 SIGMORPHON’s sixth installment of its inflection generation shared task focuses on two aspects: 
 
@@ -151,12 +151,12 @@ In many cases, there is arguably more than one “correct” way to inflect thes
 
 #### Timeline
 
-* February 25th, 2021: Training data for English, German, Portuguese and Russian are released. In contrast to previous year’s shared tasks, the data are in IPA. We invite participants to report errors.
-* March 8th, 2021: Neural and non-neural baselines for development languages released.
-* May 1st, 2021: Development data for nonce inflections is released. (This includes human judgements.)
-* May 23rd, 2021: Test data for the nonce inflection is released. (This includes human judgements.)
-* June 1th, 2021: Users submit their system output.
-* June 7th, 2021: Users submit their system description paper. 
+* ***February 25th, 2021***: Training data for English, German, Portuguese and Russian are released. In contrast to previous year’s shared tasks, the data are in IPA. We invite participants to report errors.
+* ***March 8th, 2021***: Neural and non-neural baselines for development languages released.
+* ***May 1st, 2021***: Development data for nonce inflections is released. (This includes human judgements.)
+* ***May 23rd, 2021***: Test data for the nonce inflection is released. (This includes human judgements.)
+* ***June 1th, 2021***: Users submit their system output.
+* ***June 7th, 2021***: Users submit their system description paper. 
 
 #### Data
 
@@ -191,7 +191,7 @@ For each wug lemma a micro-correlation is computed ([Spearman's ρ](https://en.w
 
 
 
-## Organizers
+#### Organizers
 
 * Tiago Pimentel (University of Cambridge) 
 * Brian Leonard (Brian Leonard Consulting)
@@ -205,5 +205,5 @@ For each wug lemma a micro-correlation is computed ([Spearman's ρ](https://en.w
 
 
 
-### References
+#### References
 
