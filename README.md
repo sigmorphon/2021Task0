@@ -216,11 +216,11 @@ where the fifth column is the log-probability under the participant's model. The
 ### References
 
 
-Albright, A., & Hayes, B. (2003). [Rules vs. analogy in English past tenses: A computational/experimental study](https://linguistics.ucla.edu/people/hayes/papers/AlbrightHayes2003RulesVsAnalogy.pdf). Cognition, 90(2), 119-161.
+Albright, A., and Hayes, B. (2003). [Rules vs. analogy in English past tenses: A computational/experimental study](https://linguistics.ucla.edu/people/hayes/papers/AlbrightHayes2003RulesVsAnalogy.pdf). Cognition, 90(2), 119-161.
 
 Marcus, G. F. (2001). [The Algebraic Mind: Integrating Connectionism and Cognitive Science](https://mitpress.mit.edu/books/algebraic-mind). MIT Press.
 
-Corkery, M., Matusevych, Y., & Goldwater, S. (2019). [Are we there yet? Encoder-decoder neural networks as cognitive models of English past tense inflection](https://arxiv.org/abs/1906.01280). Proceedings of ACL 2019.
+Corkery, M., Matusevych, Y., and Goldwater, S. (2019). [Are we there yet? Encoder-decoder neural networks as cognitive models of English past tense inflection](https://arxiv.org/abs/1906.01280). Proceedings of ACL 2019.
 
 Kirov, C. and Cotterell, R. (2018). [Recurrent Neural Networks in Linguistic Theory: Revisiting Pinker and Prince (1988) and the Past Tense Debate](https://arxiv.org/abs/1807.04783). TACL 2018. 
 
