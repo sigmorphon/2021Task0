@@ -207,6 +207,7 @@ where the fifth column is the log-probability under the participant's model. The
 * Brian Leonard (Brian Leonard Consulting)
 * Maria Ryskina (Carnegie Mellon University)
 * Sabrina Mielke (Johns Hopkins University)
+* Coleman Haley (Johns Hopkins University)
 * Eleanor Chodroff (University of York)
 * Ryan Cotterell (ETH Zürich)
 * Ekaterina Vylomova (University of Melbourne)
