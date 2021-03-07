@@ -153,7 +153,7 @@ This shared task adopts the experimental paradigm introduced by [Albright and Ha
 + pide /paɪd/
 + sprake /spɹeɪk/
 
-In many cases, there is arguably more than one “correct” way to inflect these verbs according to English grammar because they are unattested. For instance, who is to say that the past tense of “fink” should be “finked” and not “fank”. For that reason, we have elicited human judgements (on [Amazon’s Mechanical Turk](https://www.mturk.com/)) that tell native speakers’ preferences towards specific past tense inflections. The candidate set of potential inflections were generated through a linguist-in-the-loop procedure that made use of the state-of-the-art neural inflector from [Wu et al. (2021)](https://arxiv.org/abs/2005.10213). 
+In many cases, there is arguably more than one “correct” way to inflect these verbs according to English grammar because they are unattested. For instance, who is to say that the past tense of “fink” should be “finked” and not “fank”. For that reason, we have elicited human judgements (on [Amazon’s Mechanical Turk](https://www.mturk.com/)) that tell native speakers’ preferences towards specific past tense inflections. The candidate set of potential inflections was generated through a linguist-in-the-loop procedure that made use of the state-of-the-art neural inflector from [Wu et al. (2021)](https://arxiv.org/abs/2005.10213). 
 
 ### Timeline
 
@@ -198,7 +198,7 @@ flink  flinked  V;PST   3.2   -0.87
 flink  flank    V;PST   4.1   -0.92
 flink  flunk    V;PST   1.5   -6.21
 ````
-where the fifth column is the log-probability under the participant's model. The micro-correlation here is ρ=0.5. These per-paradigm micro-correlations would then be arithmetically averaged to produce the final macro-average. The organizers will release and evaluation script for system evaluation along with the development data, which is the first data release where there are human judgements in the TSV. 
+where the fifth column is the log-probability under the participant's model. The micro-correlation here is ρ=0.5. These per-paradigm micro-correlations would then be arithmetically averaged to produce the final macro-average. The organizers will release an evaluation script for system evaluation along with the development data, which is the first data release where there are human judgements in the TSV. 
 
 
 ### Organizers
