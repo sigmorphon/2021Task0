@@ -53,7 +53,7 @@ In the ***Evaluation Phase***, the participants’ models will be evaluated on h
 |Chukchi |Chukotko-Kamchatkan | ckt | https://github.com/unimorph/ckt | Karina Mischenkova, Maria Ryskina | 
 |Evenki |Tungusic | evn | https://github.com/unimorph/evn| Elena Klyachko|
 |Central Kurdish (Sorani) |Indo-European | ckb | https://github.com/unimorph/ckb| Alexina project  and Ali Salehi | 
-| Northern Kurdish (Kurmanji) |Indo-European | sdh | https://github.com/unimorph/kmr | Alexina project  | 
+| Northern Kurdish (Kurmanji) |Indo-European | kmr | https://github.com/unimorph/kmr | Alexina project  | 
 | Polish | Indo-European | pol | https://github.com/unimorph/pol | Witold Kieraś, Marcin Wolinski | 
 | Russian | Indo-European | rus | https://github.com/unimorph/rus | Wiktionary | 
 | Czech | Indo-European | ces | https://github.com/unimorph/ces | Wiktionary| 
