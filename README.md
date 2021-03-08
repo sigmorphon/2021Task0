@@ -49,7 +49,7 @@ In the ***Evaluation Phase***, the participants’ models will be evaluated on h
 |Seneca |Iroquoian | see | https://github.com/unimorph/see| Zoey Liu, Richard J. Hatcher, Emily Prud'hommeaux | 
 |Sakha |Turkic | sah | https://github.com/unimorph/sah| Maria Ryskina | 
 |Tuvan |Turkic | tyv | https://github.com/unimorph/tyv| Maria Ryskina |
-|Itelmen |Chukotko-Kamchatkan | itl | https://github.com/unimorph/itl| Karina Mischenkova, Maria Ryskina, Sofya Ganieva, Matvey Plugaryov | 
+|Itelmen |Chukotko-Kamchatkan | itl | https://github.com/unimorph/itl| Karina Mischenkova, Sofya Ganieva, Matvey Plugaryov | 
 |Chukchi |Chukotko-Kamchatkan | ckt | https://github.com/unimorph/ckt | Karina Mischenkova, Maria Ryskina | 
 |Evenki |Tungusic | evn | https://github.com/unimorph/evn| Elena Klyachko|
 |Central Kurdish (Sorani) |Indo-European | ckb | https://github.com/unimorph/ckb| Alexina project  and Ali Salehi | 
