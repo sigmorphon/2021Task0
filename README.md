@@ -49,8 +49,8 @@ In the ***Evaluation Phase***, the participants’ models will be evaluated on h
 |Seneca |Iroquoian | see | https://github.com/unimorph/see| Zoey Liu, Richard J. Hatcher, Emily Prud'hommeaux | 
 |Sakha |Turkic | sah | https://github.com/unimorph/sah| Maria Ryskina | 
 |Tuvan |Turkic | tyv | https://github.com/unimorph/tyv| Maria Ryskina |
-|Itelmen |Chukotko-Kamchatkan | itl | https://github.com/unimorph/itl| Karina Mischenkova, Sofya Ganieva, Matvey Plugaryov | 
-|Chukchi |Chukotko-Kamchatkan | ckt | https://github.com/unimorph/ckt | Karina Mischenkova, Maria Ryskina | 
+|Itelmen |Chukotko-Kamchatkan | itl | https://github.com/unimorph/itl| Karina Mishchenkova, Sofya Ganieva, Matvey Plugaryov | 
+|Chukchi |Chukotko-Kamchatkan | ckt | https://github.com/unimorph/ckt | Karina Mishchenkova, Maria Ryskina | 
 |Evenki |Tungusic | evn | https://github.com/unimorph/evn| Elena Klyachko|
 |Central Kurdish (Sorani) |Indo-European | ckb | https://github.com/unimorph/ckb| Alexina project  and Ali Salehi | 
 | Northern Kurdish (Kurmanji) |Indo-European | kmr | https://github.com/unimorph/kmr | Alexina project  | 
@@ -127,7 +127,7 @@ This baseline is a multilingual transformer ([Vaswani et al., 2017](https://pape
 ### Organizers
 **Task Logistics**: Tiago Pimentel, Brian Leonard, Eleanor Chodroff,  Maria Ryskina, Sabrina Mielke, Garrett Nicolai, Yustinus Ghanggo Ate, Francis Tyers, Edoardo M. Ponti, Niklas Stoehr, Ritesh Kumar, Kairit Sirts, Zoey Liu, Mans Hulden, David Yarowsky, Ryan Cotterell, Ekaterina Vylomova, Ben Ambridge
 
-**Annotators**: Salam Khalifa, Nizar Habash, Charbel El-Khaissi, Omer Goldman, Michael Gasser, William Lane, Matt Coler, Arturo Oncevay, Jaime Rafael Montoya Samame, Gema Celeste Silva Villegas, Zoey Liu, Richard J. Hatcher, Emily Prud'hommeaux, Maria Ryskina, Karina Mischenkova, Sofya Ganieva, Matvey Plugaryov, Elena Klyachko, Ali Salehi, Andrew and Natalia Krizhanovsky, Ritesh Kumar, Clara Vania, Yustinus Ghanggo Ate, Witold Kieraś, Marcin Wolinski, Totok Suhardijanto, Zahroh Nuriah, Mohit Raj, Shyam Ratan
+**Annotators**: Salam Khalifa, Nizar Habash, Charbel El-Khaissi, Omer Goldman, Michael Gasser, William Lane, Matt Coler, Arturo Oncevay, Jaime Rafael Montoya Samame, Gema Celeste Silva Villegas, Zoey Liu, Richard J. Hatcher, Emily Prud'hommeaux, Maria Ryskina, Karina Mishchenkova, Sofya Ganieva, Matvey Plugaryov, Elena Klyachko, Ali Salehi, Andrew and Natalia Krizhanovsky, Ritesh Kumar, Clara Vania, Yustinus Ghanggo Ate, Witold Kieraś, Marcin Wolinski, Totok Suhardijanto, Zahroh Nuriah, Mohit Raj, Shyam Ratan
 
 
 
