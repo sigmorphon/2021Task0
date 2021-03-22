@@ -3,15 +3,18 @@
 Non-neural baseline system for the SIGMORPHON 2020 Shared Task 0.
 
 Author: Mans Hulden
-Last Update: 03/04/2020
+Modified by: Tiago Pimentel
+Last Update: 22/03/2021
 """
 
 import sys, os, getopt, re
 from functools import wraps
 from glob import glob
 
+
 def hamming(s,t):
     return sum(1 for x,y in zip(s,t) if x != y)
+
 
 def halign(s,t):
     """Align two strings by Hamming distance."""
@@ -41,6 +44,7 @@ def halign(s,t):
     newout = ''.join(o for i,o in zipped if i != '_' or o != '_')
     return newin, newout
 
+
 def levenshtein(s, t, inscost = 1.0, delcost = 1.0, substcost = 1.0):
     """Recursive implementation of Levenshtein, with alignments returned."""
     @memolrec
@@ -62,6 +66,7 @@ def levenshtein(s, t, inscost = 1.0, delcost = 1.0, substcost = 1.0):
     answer = lrec('', '', s, t, 0)
     return answer[0],answer[1],answer[4]
 
+
 def memolrec(func):
     """Memoizer for Levenshtein."""
     cache = {}
@@ -72,6 +77,7 @@ def memolrec(func):
             cache[(sr,tr)] = (res[0][len(sp):], res[1][len(tp):], res[4] - cost)
         return sp + cache[(sr,tr)][0], tp + cache[(sr,tr)][1], '', '', cost + cache[(sr,tr)][2]
     return wrap
+
 
 def alignprs(lemma, form):
     """Break lemma/form into three parts:
@@ -88,6 +94,7 @@ def alignprs(lemma, form):
     # trailing spaces
     tspace = max(len(alemma[::-1]) - len(alemma[::-1].lstrip('_')), len(aform[::-1]) - len(aform[::-1].lstrip('_')))
     return alemma[0:lspace], alemma[lspace:len(alemma)-tspace], alemma[len(alemma)-tspace:], aform[0:lspace], aform[lspace:len(alemma)-tspace], aform[len(alemma)-tspace:]
+
 
 def prefix_suffix_rules_get(lemma, form):
     """Extract a number of suffix-change and prefix-change rules
@@ -112,6 +119,7 @@ def prefix_suffix_rules_get(lemma, form):
             prules = {(x[0].replace('_',''), x[1].replace('_','')) for x in prules}
 
     return prules, srules
+
 
 def apply_best_rule(lemma, msd, allprules, allsrules):
     """Applies the longest-matching suffix-changing rule given an input
@@ -139,110 +147,109 @@ def apply_best_rule(lemma, msd, allprules, allsrules):
     base = base.replace('>', '')
     return base
 
+
 def numleadingsyms(s, symbol):
     return len(s) - len(s.lstrip(symbol))
+
 
 def numtrailingsyms(s, symbol):
     return len(s) - len(s.rstrip(symbol))
 
 ###############################################################################
 
+
 def main(argv):
     options, remainder = getopt.gnu_getopt(argv[1:], 'ohp:', ['output','help','path='])
-    OUTPUT, HELP, PATH = False, False, './../../task0-data/'
+    OUTPUT, HELP, path = False, False, './part1/development_languages/'
     for opt, arg in options:
         if opt in ('-o', '--output'):
             OUTPUT = True
         elif opt in ('-h', '--help'):
             HELP = True
         elif opt in ('-p', '--path'):
-            PATH = arg
+            path = arg
 
     if HELP:
             print("\n*** Baseline for the SIGMORPHON 2020 shared task ***\n")
-            print("By default, the program runs all languages in all groups")
-            print("only evaluating accuracy. To create output files, use -o")
-            print("The training and dev-data are assumed to live in ./../../task0-data/")
+            print("By default, the program runs all languages only evaluating accuracy.")
+            print("To create output files, use -o")
+            print("The training and dev-data are assumed to live in ./part1/development_languages/")
             print("Options:")
             print(" -o         create output files with guesses (and don't just evaluate)")
-            print(" -p [path]  data files path. Default is ./../../task0-data/")
+            print(" -p [path]  data files path. Default is ./part1/development_languages/")
             quit()
+
     totalavg, numlang = 0.0, 0
-    for family in glob(PATH + "/*/"):
-        print("Family:", family)
-        runningavg, numiter = 0.0, 0
-        for lang in sorted(list({re.sub('\.trn.*$','',d) for d in os.listdir(family) if '.trn' in d})):
-            allprules, allsrules = {}, {}
-            if not os.path.isfile(family + lang +  ".trn"):
-                continue
-            lines = [line.strip() for line in open(family + lang + ".trn", "r") if line != '\n']
+    for lang in sorted(list({re.sub('\.train.*$','',d) for d in os.listdir(path) if '.train' in d})):
+        allprules, allsrules = {}, {}
+        if not os.path.isfile(path + lang +  ".train"):
+            continue
+        lines = [line.strip() for line in open(path + lang + ".train", "r") if line != '\n']
 
-            # First, test if language is predominantly suffixing or prefixing
-            # If prefixing, work with reversed strings
-            prefbias, suffbias = 0,0
-            for l in lines:
-                lemma, form, _ = l.split(u'\t')
-                aligned = halign(lemma, form)
-                if ' ' not in aligned[0] and ' ' not in aligned[1] and '-' not in aligned[0] and '-' not in aligned[1]:
-                    prefbias += numleadingsyms(aligned[0],'_') + numleadingsyms(aligned[1],'_')
-                    suffbias += numtrailingsyms(aligned[0],'_') + numtrailingsyms(aligned[1],'_')
-            for l in lines: # Read in lines and extract transformation rules from pairs
-                lemma, form, msd = l.split(u'\t')
-                if prefbias > suffbias:
-                    lemma = lemma[::-1]
-                    form = form[::-1]
-                prules, srules = prefix_suffix_rules_get(lemma, form)
+        # First, test if language is predominantly suffixing or prefixing
+        # If prefixing, work with reversed strings
+        prefbias, suffbias = 0,0
+        for l in lines:
+            lemma, form, _ = l.split(u'\t')
+            aligned = halign(lemma, form)
+            if ' ' not in aligned[0] and ' ' not in aligned[1] and '-' not in aligned[0] and '-' not in aligned[1]:
+                prefbias += numleadingsyms(aligned[0],'_') + numleadingsyms(aligned[1],'_')
+                suffbias += numtrailingsyms(aligned[0],'_') + numtrailingsyms(aligned[1],'_')
+        for l in lines: # Read in lines and extract transformation rules from pairs
+            lemma, form, msd = l.split(u'\t')
+            if prefbias > suffbias:
+                lemma = lemma[::-1]
+                form = form[::-1]
+            prules, srules = prefix_suffix_rules_get(lemma, form)
 
-                if msd not in allprules and len(prules) > 0:
-                    allprules[msd] = {}
-                if msd not in allsrules and len(srules) > 0:
-                    allsrules[msd] = {}
+            if msd not in allprules and len(prules) > 0:
+                allprules[msd] = {}
+            if msd not in allsrules and len(srules) > 0:
+                allsrules[msd] = {}
 
-                for r in prules:
-                    if (r[0],r[1]) in allprules[msd]:
-                        allprules[msd][(r[0],r[1])] = allprules[msd][(r[0],r[1])] + 1
-                    else:
-                        allprules[msd][(r[0],r[1])] = 1
+            for r in prules:
+                if (r[0],r[1]) in allprules[msd]:
+                    allprules[msd][(r[0],r[1])] = allprules[msd][(r[0],r[1])] + 1
+                else:
+                    allprules[msd][(r[0],r[1])] = 1
 
-                for r in srules:
-                    if (r[0],r[1]) in allsrules[msd]:
-                        allsrules[msd][(r[0],r[1])] = allsrules[msd][(r[0],r[1])] + 1
-                    else:
-                        allsrules[msd][(r[0],r[1])] = 1
+            for r in srules:
+                if (r[0],r[1]) in allsrules[msd]:
+                    allsrules[msd][(r[0],r[1])] = allsrules[msd][(r[0],r[1])] + 1
+                else:
+                    allsrules[msd][(r[0],r[1])] = 1
 
-            # Run eval on dev
-            devlines = [line.strip() for line in open(family + lang + ".dev", "r") if line != '\n']
-            numcorrect = 0
-            numguesses = 0
-            if OUTPUT:
-                outfile = open(family + lang + "-" + quantity + "-out", "w")
-            for l in devlines:
-                lemma, correct, msd, = l.split(u'\t')
+        # Run eval on dev
+        devlines = [line.strip() for line in open(path + lang + ".dev", "r") if line != '\n']
+        numcorrect = 0
+        numguesses = 0
+        if OUTPUT:
+            outfile = open(path + lang + "-out", "w")
+        for l in devlines:
+            lemma, correct, msd, = l.split(u'\t')
 #                    lemma, msd, = l.split(u'\t')
-                if prefbias > suffbias:
-                    lemma = lemma[::-1]
-                outform = apply_best_rule(lemma, msd, allprules, allsrules)
-                if prefbias > suffbias:
-                    outform = outform[::-1]
-                    lemma = lemma[::-1]
-                if outform == correct:
-                    numcorrect += 1
-                numguesses += 1
-                if OUTPUT:
-                    outfile.write(lemma + "\t" + outform + "\t" + msd + "\n")
-
+            if prefbias > suffbias:
+                lemma = lemma[::-1]
+            outform = apply_best_rule(lemma, msd, allprules, allsrules)
+            if prefbias > suffbias:
+                outform = outform[::-1]
+                lemma = lemma[::-1]
+            if outform == correct:
+                numcorrect += 1
+            numguesses += 1
             if OUTPUT:
-                outfile.close()
+                outfile.write(lemma + "\t" + outform + "\t" + msd + "\n")
 
-            runningavg += numcorrect/float(numguesses)
-            numiter += 1
-            numlang += 1
-            totalavg += numcorrect/float(numguesses)
+        if OUTPUT:
+            outfile.close()
 
-            print(lang + ": " + str(str(numcorrect/float(numguesses)))[0:7])
-        print("Average:", str(runningavg/float(numiter)))
-        print("------------------------------------\n")
+        numlang += 1
+        totalavg += numcorrect/float(numguesses)
+
+        print(lang + ": " + str(str(numcorrect/float(numguesses)))[0:7])
+
     print("Average accuracy", totalavg/float(numlang))
+
 
 if __name__ == "__main__":
     main(sys.argv)
