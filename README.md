@@ -1,6 +1,6 @@
 # SIGMORPHON–UniMorph Shared Task on Generalization in Morphological Inflection Generation
 
-SIGMORPHON’s sixth installment of its inflection generation shared task will be divided into two parts: 
+SIGMORPHON’s sixth installment of its inflection generation shared task will be divided into two parts:
 
 + ***Part 1***: [Generalization Across Typologically Diverse Languages](https://github.com/sigmorphon/2021Task0#part-1-generalization-across-typologically-diverse-languages)
 + ***Part 2***: [Are We There Yet? A Shared Task on Cognitively Plausible Morphological Inflection](https://github.com/sigmorphon/2021Task0#part-2-are-we-there-yet1-a-shared-task-on-cognitively-plausible-morphological-inflection)
@@ -25,7 +25,7 @@ The model should be general enough to work for natural languages of any typologi
 This task will proceed in three phases: the ***Development Phase***, the ***Generalization Phase***, and the ***Evaluation Phase***. As the phases advance, more data and more languages will be released.
 
 In the ***Development Phase***, we will provide training and development splits that should be used to *develop* your system.
-We will refer to them as the *development languages*. The list of languages is below. 
+We will refer to them as the *development languages*. The list of languages is below.
 
 In the ***Generalization Phase***, we will provide training and development splits for new languages where approximately half are genetically related (belong to the same family) and half are genetically *unrelated* (are isolates or belong to a different family) to the development languages. We will keep the languages in the Generalization Phase a surprise until April 2021. We will also keep the genetically unrelated language *families* a surprise, though some languages will come from the same families as those in the Development Phase.
 
@@ -34,43 +34,43 @@ In the ***Evaluation Phase***, the participants’ models will be evaluated on h
 
 #### Development Languages
 
-| Language | Family| code | UM | Annotators  | 
+| Language | Family| code | UM | Annotators  |
 |---|---|---|---|---|
 |Egyptian Arabic |Afro-Asiatic | arz  | https://github.com/unimorph/arz/  | Salam Khalifa and Nizar Habash  |
 |Gulf Arabic |Afro-Asiatic | afb | https://github.com/unimorph/afb/  |Salam Khalifa and Nizar Habash  |
 |Modern Standard Arabic |Afro-Asiatic | ara | https://github.com/unimorph/ara| Salam Khalifa and Nizar Habash  |
 |Classic Syriac | Afro-Asiatic | syc | https://github.com/unimorph/syc| Charbel El-Khaissi   |
 |Hebrew (Vocalized) |Afro-Asiatic | heb | https://github.com/unimorph/heb| Omer Goldman   |
-|Amharic | Afro-Asiatic | amh| https://github.com/unimorph/amh| Michael Gasser   | 
-|Kunwinjku |Arnhem (AU) | gup | https://github.com/unimorph/gup| William Lane | 
-|Aymara |Aymaran | aym | https://github.com/unimorph/aym| Matt Coler, Eleanor Chodroff | 
-|Ashaninka |Arawakan | cni | https://github.com/unimorph/cni| Arturo Oncevay, Jaime Rafael Montoya Samame | 
-|Yanesha |Arawakan | ame | https://github.com/unimorph/ame| Arturo Oncevay, Gema Celeste Silva Villegas | 
-|Seneca |Iroquoian | see | https://github.com/unimorph/see| Zoey Liu, Richard J. Hatcher, Emily Prud'hommeaux | 
-|Sakha |Turkic | sah | https://github.com/unimorph/sah| Maria Ryskina | 
+|Amharic | Afro-Asiatic | amh| https://github.com/unimorph/amh| Michael Gasser   |
+|Kunwinjku |Arnhem (AU) | gup | https://github.com/unimorph/gup| William Lane |
+|Aymara |Aymaran | aym | https://github.com/unimorph/aym| Matt Coler, Eleanor Chodroff |
+|Ashaninka |Arawakan | cni | https://github.com/unimorph/cni| Arturo Oncevay, Jaime Rafael Montoya Samame |
+|Yanesha |Arawakan | ame | https://github.com/unimorph/ame| Arturo Oncevay, Gema Celeste Silva Villegas |
+|Seneca |Iroquoian | see | https://github.com/unimorph/see| Zoey Liu, Richard J. Hatcher, Emily Prud'hommeaux |
+|Sakha |Turkic | sah | https://github.com/unimorph/sah| Maria Ryskina |
 |Tuvan |Turkic | tyv | https://github.com/unimorph/tyv| Maria Ryskina |
-|Itelmen |Chukotko-Kamchatkan | itl | https://github.com/unimorph/itl| Karina Mishchenkova, Sofya Ganieva, Matvey Plugaryov | 
-|Chukchi |Chukotko-Kamchatkan | ckt | https://github.com/unimorph/ckt | Karina Mishchenkova, Maria Ryskina | 
+|Itelmen |Chukotko-Kamchatkan | itl | https://github.com/unimorph/itl| Karina Mishchenkova, Sofya Ganieva, Matvey Plugaryov |
+|Chukchi |Chukotko-Kamchatkan | ckt | https://github.com/unimorph/ckt | Karina Mishchenkova, Maria Ryskina |
 |Evenki |Tungusic | evn | https://github.com/unimorph/evn| Elena Klyachko|
-|Central Kurdish (Sorani) |Indo-European | ckb | https://github.com/unimorph/ckb| Alexina project  and Ali Salehi | 
-| Northern Kurdish (Kurmanji) |Indo-European | kmr | https://github.com/unimorph/kmr | Alexina project  | 
-| Polish | Indo-European | pol | https://github.com/unimorph/pol | Witold Kieraś, Marcin Wolinski | 
-| Russian | Indo-European | rus | https://github.com/unimorph/rus | Wiktionary | 
-| Czech | Indo-European | ces | https://github.com/unimorph/ces | Wiktionary| 
-| Bulgarian | Indo-European | bul | https://github.com/unimorph/bul | Wiktionary | 
-| German | Indo-European | deu | https://github.com/unimorph/deu | Wiktionary | 
-| Dutch | Indo-European | nld | https://github.com/unimorph/nld | Wiktionary | 
+|Central Kurdish (Sorani) |Indo-European | ckb | https://github.com/unimorph/ckb| Alexina project  and Ali Salehi |
+| Northern Kurdish (Kurmanji) |Indo-European | kmr | https://github.com/unimorph/kmr | Alexina project  |
+| Polish | Indo-European | pol | https://github.com/unimorph/pol | Witold Kieraś, Marcin Wolinski |
+| Russian | Indo-European | rus | https://github.com/unimorph/rus | Wiktionary |
+| Czech | Indo-European | ces | https://github.com/unimorph/ces | Wiktionary|
+| Bulgarian | Indo-European | bul | https://github.com/unimorph/bul | Wiktionary |
+| German | Indo-European | deu | https://github.com/unimorph/deu | Wiktionary |
+| Dutch | Indo-European | nld | https://github.com/unimorph/nld | Wiktionary |
 | Spanish | Indo-European | spa | https://github.com/unimorph/spa | Wiktionary |
-| Portuguese | Indo-European | por | https://github.com/unimorph/por | Wiktionary | 
-| Braj | Indo-European | bra | https://github.com/unimorph/bra |Ritesh Kumar | 
-| Magahi | Indo-European | mag | https://github.com/unimorph/mag | Ritesh Kumar | 
-| Indonesian | Austronesian| ind | https://github.com/unimorph/ind   | Clara Vania | 
-| Kodi | Austronesian| kod | https://github.com/unimorph/kod | Yustinus Ghanggo Ate | 
+| Portuguese | Indo-European | por | https://github.com/unimorph/por | Wiktionary |
+| Braj | Indo-European | bra | https://github.com/unimorph/bra |Ritesh Kumar |
+| Magahi | Indo-European | mag | https://github.com/unimorph/mag | Ritesh Kumar |
+| Indonesian | Austronesian| ind | https://github.com/unimorph/ind   | Clara Vania |
+| Kodi | Austronesian| kod | https://github.com/unimorph/kod | Yustinus Ghanggo Ate |
 | Eibela | Trans–New Guinea | ail | https://github.com/unimorph/ail | Grant Aiton |
-| Veps | Uralic | vep | https://github.com/unimorph/vep | Andrew and Natalia Krizhanovsky | 
-| Karelian | Uralic | krl | https://github.com/unimorph/krl | Andrew and Natalia Krizhanovsky | 
-| Ludic | Uralic | lud | https://github.com/unimorph/lud | Andrew and Natalia Krizhanovsky | 
-| Livvi | Uralic | olo | https://github.com/unimorph/olo | Andrew and Natalia Krizhanovsky | 
+| Veps | Uralic | vep | https://github.com/unimorph/vep | Andrew and Natalia Krizhanovsky |
+| Karelian | Uralic | krl | https://github.com/unimorph/krl | Andrew and Natalia Krizhanovsky |
+| Ludic | Uralic | lud | https://github.com/unimorph/lud | Andrew and Natalia Krizhanovsky |
+| Livvi | Uralic | olo | https://github.com/unimorph/olo | Andrew and Natalia Krizhanovsky |
 
 
 ### Timeline
@@ -119,9 +119,14 @@ The human-like generalization part of this shared task will be evaluated based o
 
 ### Baselines
 
-The organizers will provide one neural baseline for the participants’ consumption.
+The organizers will provide one non-neural and one neural baseline for the participants’ consumption.
 Its use is optional and is provided to help the participants develop their own models faster.
-This baseline is a multilingual transformer ([Vaswani et al., 2017](https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf)). The version of this model adopted for character-level tasks currently holds the state-of-the-art on the 2017 SIGMORPHON shared task data. The transformer takes the lemma and morphological tags as input and outputs the target inflection. Given the low-resource setup, a single model will be trained on all languages. Additionally, we consider the data augmentation technique used by [Anastasopoulos and Neubig (2019)](https://www.aclweb.org/anthology/D19-1091/) as another baseline.
+The neural baseline is a multilingual transformer ([Vaswani et al., 2017](https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf)). The version of this model adopted for character-level tasks currently holds the state-of-the-art on the 2017 SIGMORPHON shared task data. The transformer takes the lemma and morphological tags as input and outputs the target inflection. Given the low-resource setup, a single model will be trained on all languages. Additionally, we consider the data augmentation technique used by [Anastasopoulos and Neubig (2019)](https://www.aclweb.org/anthology/D19-1091/) as another baseline.
+
+To run the non-neural baseline use command:
+```bash
+$ python baselines/nonneural/baseline.py --path part1/development_languages/
+```
 
 
 ### Organizers
@@ -142,7 +147,7 @@ Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A., Kaise
 ## Part 2: Are We There Yet?<sup>1</sup> A Shared Task on Cognitively Plausible Morphological Inflection
 
 ### Task Description
-An open question in the use of neural networks for the study of language is to what degree they resemble humans in how they generate language. In the realm of morphology, this question goes back 40 years to the infamous past-tense debate of the 1980s where one camp argued humans use rule-based mechanisms and another argued that humans inflect words with a process closer to neural networks. See Gary Marcus’ book [The Algebraic Mind](https://mitpress.mit.edu/books/algebraic-mind) for an overview or several recent papers in the ACL community on the topic, e.g. [Kirov and Cotterell (2018)](https://arxiv.org/abs/1807.04783), [Corkery et al. (2019)](https://arxiv.org/abs/1906.01280) and [McCurdy et al. (2020)](https://www.aclweb.org/anthology/2020.acl-main.159/). 
+An open question in the use of neural networks for the study of language is to what degree they resemble humans in how they generate language. In the realm of morphology, this question goes back 40 years to the infamous past-tense debate of the 1980s where one camp argued humans use rule-based mechanisms and another argued that humans inflect words with a process closer to neural networks. See Gary Marcus’ book [The Algebraic Mind](https://mitpress.mit.edu/books/algebraic-mind) for an overview or several recent papers in the ACL community on the topic, e.g. [Kirov and Cotterell (2018)](https://arxiv.org/abs/1807.04783), [Corkery et al. (2019)](https://arxiv.org/abs/1906.01280) and [McCurdy et al. (2020)](https://www.aclweb.org/anthology/2020.acl-main.159/).
 
 
 This shared task adopts the experimental paradigm introduced by [Albright and Hayes (2003)](https://linguistics.ucla.edu/people/hayes/papers/AlbrightHayes2003RulesVsAnalogy.pdf). We have created a large number of new nonce words in four languages: English, German, Portuguese and Russian. To the best of our knowledge, this will be the largest and most multilingual collection of nonce words in existence. The goal of the participants in the shared task is to design a model that morphologically inflects the nonce words according to the grammar of the given languages. As an example, consider the following nonce verbs that obey English phonotactics:
@@ -153,7 +158,7 @@ This shared task adopts the experimental paradigm introduced by [Albright and Ha
 + pide /paɪd/
 + sprake /spɹeɪk/
 
-In many cases, there is arguably more than one “correct” way to inflect these verbs according to English grammar because they are unattested. For instance, who is to say that the past tense of “fink” should be “finked” and not “fank”. For that reason, we have elicited human judgements (on [Amazon’s Mechanical Turk](https://www.mturk.com/)) that tell native speakers’ preferences towards specific past tense inflections. The candidate set of potential inflections was generated through a linguist-in-the-loop procedure that made use of the state-of-the-art neural inflector from [Wu et al. (2021)](https://arxiv.org/abs/2005.10213). 
+In many cases, there is arguably more than one “correct” way to inflect these verbs according to English grammar because they are unattested. For instance, who is to say that the past tense of “fink” should be “finked” and not “fank”. For that reason, we have elicited human judgements (on [Amazon’s Mechanical Turk](https://www.mturk.com/)) that tell native speakers’ preferences towards specific past tense inflections. The candidate set of potential inflections was generated through a linguist-in-the-loop procedure that made use of the state-of-the-art neural inflector from [Wu et al. (2021)](https://arxiv.org/abs/2005.10213).
 
 ### Timeline
 
@@ -162,7 +167,7 @@ In many cases, there is arguably more than one “correct” way to inflect thes
 * ***May 1, 2021***: Development data for nonce inflections are released. (This includes human judgements.)
 * ***May 23, 2021***: Test data for the nonce inflections are released. (This includes human judgements.)
 * ***June 1, 2021***: Users submit their system output.
-* ***June 7, 2021***: Users submit their system description paper. 
+* ***June 7, 2021***: Users submit their system description paper.
 
 ### Data and Evaluation
 
@@ -176,9 +181,9 @@ The training data are attested inflections in English, German, Portuguese and Ru
 </div>
 
 
-In contrast to the example above, the words are encoded in the [International Phonetic Alphabet (IPA)](https://en.wikipedia.org/wiki/International_Phonetic_Alphabet) not in the standard orthography for the given language. 
+In contrast to the example above, the words are encoded in the [International Phonetic Alphabet (IPA)](https://en.wikipedia.org/wiki/International_Phonetic_Alphabet) not in the standard orthography for the given language.
 
-The **development** and **test data** are in a different format. They are quadruples 
+The **development** and **test data** are in a different format. They are quadruples
 
 ````
 flink  flinked  V;PST   3.2
@@ -186,10 +191,10 @@ flink  flank    V;PST   4.1
 flink  flunk    V;PST   1.5
 ````
 
-where the fourth column is a native-speaker rating on a [Likert scale](https://en.wikipedia.org/wiki/Likert_scale). As stated above, these rankings were given by native speakers on Amazon’s Mechanical Turk. 
+where the fourth column is a native-speaker rating on a [Likert scale](https://en.wikipedia.org/wiki/Likert_scale). As stated above, these rankings were given by native speakers on Amazon’s Mechanical Turk.
 
-The task will be evaluated in the following manner. Having trained a model on the training data, the participants are asked to provide model scores for each inflection of the novel word. For instance, if the model is probabilistic (which is not a requirement!), the participants could provide the log-probability of each inflection under their model as the score. To use the example given above, the particpants could provide log p(flinked | flink, V;V.PTCP;PRS), log p(flank | flink, V;V.PTCP;PRS) and log p(flunk | flink, V;V.PTCP;PRS). 
-For each wug lemma, e.g. "flink", a micro-correlation is computed using ([Spearman's ρ](https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient)) between the human judgements and the provided model scores. Then, a macro-average is computed by arithmetically averaging the micro-correlations. Systems will be ranked by the final macro-average. 
+The task will be evaluated in the following manner. Having trained a model on the training data, the participants are asked to provide model scores for each inflection of the novel word. For instance, if the model is probabilistic (which is not a requirement!), the participants could provide the log-probability of each inflection under their model as the score. To use the example given above, the particpants could provide log p(flinked | flink, V;V.PTCP;PRS), log p(flank | flink, V;V.PTCP;PRS) and log p(flunk | flink, V;V.PTCP;PRS).
+For each wug lemma, e.g. "flink", a micro-correlation is computed using ([Spearman's ρ](https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient)) between the human judgements and the provided model scores. Then, a macro-average is computed by arithmetically averaging the micro-correlations. Systems will be ranked by the final macro-average.
 
 As an evaluation example, consider the following hypothetical submitted system output:
 
@@ -198,12 +203,12 @@ flink  flinked  V;PST   3.2   -0.87
 flink  flank    V;PST   4.1   -0.92
 flink  flunk    V;PST   1.5   -6.21
 ````
-where the fifth column is the log-probability under the participant's model. The micro-correlation here is ρ=0.5. These per-paradigm micro-correlations would then be arithmetically averaged to produce the final macro-average. The organizers will release an evaluation script for system evaluation along with the development data, which is the first data release where there are human judgements in the TSV. 
+where the fifth column is the log-probability under the participant's model. The micro-correlation here is ρ=0.5. These per-paradigm micro-correlations would then be arithmetically averaged to produce the final macro-average. The organizers will release an evaluation script for system evaluation along with the development data, which is the first data release where there are human judgements in the TSV.
 
 
 ### Organizers
 
-* Tiago Pimentel (University of Cambridge) 
+* Tiago Pimentel (University of Cambridge)
 * Brian Leonard (Brian Leonard Consulting)
 * Maria Ryskina (Carnegie Mellon University)
 * Sabrina Mielke (Johns Hopkins University)
@@ -223,9 +228,9 @@ Marcus, G. F. (2001). [The Algebraic Mind: Integrating Connectionism and Cogniti
 
 Corkery, M., Matusevych, Y., and Goldwater, S. (2019). [Are we there yet? Encoder-decoder neural networks as cognitive models of English past tense inflection](https://arxiv.org/abs/1906.01280). Proceedings of ACL 2019.
 
-Kirov, C. and Cotterell, R. (2018). [Recurrent Neural Networks in Linguistic Theory: Revisiting Pinker and Prince (1988) and the Past Tense Debate](https://arxiv.org/abs/1807.04783). TACL 2018. 
+Kirov, C. and Cotterell, R. (2018). [Recurrent Neural Networks in Linguistic Theory: Revisiting Pinker and Prince (1988) and the Past Tense Debate](https://arxiv.org/abs/1807.04783). TACL 2018.
 
-Kirov, C., Cotterell, R., Sylak-Glassman, J., Walther, G., Vylomova, E., Xia, P., Faruqui, M., Mielke, S., McCarthy, A., Kübler, S., Yarowsky, D., Eisner, J., and Hulden, M. (2018). [UniMorph 2.0: Universal Morphology](https://arxiv.org/abs/1810.11101). Proceedings of LREC 2018. 
+Kirov, C., Cotterell, R., Sylak-Glassman, J., Walther, G., Vylomova, E., Xia, P., Faruqui, M., Mielke, S., McCarthy, A., Kübler, S., Yarowsky, D., Eisner, J., and Hulden, M. (2018). [UniMorph 2.0: Universal Morphology](https://arxiv.org/abs/1810.11101). Proceedings of LREC 2018.
 
 McCurdy, K., Goldwater, S., and Lopez, A. (2020). [Inflecting When There’s No Majority: Limitations of Encoder-Decoder Neural Networks as Cognitive Models for German Plurals](https://www.aclweb.org/anthology/2020.acl-main.159/). Proceedings of ACL 2020.
 
