@@ -128,6 +128,21 @@ To run the non-neural baseline use command:
 $ python baselines/nonneural/baseline.py --path part1/development_languages/
 ```
 
+To run the neural baseline first download and augment [(Anastasopoulos and Neubig, 2019)](https://arxiv.org/abs/1908.05838) the data
+```bash
+$ mkdir part1/original
+$ cp part1/development_languages/* part1/original
+
+$ bash baselines/neural/example/sigmorphon2021-shared-tasks/augment.sh
+$ python baselines/neural/example/sigmorphon2021-shared-tasks/task0-build-dataset.py all
+```
+
+Then, to run the transducer [(Wu et al, 2021)](https://arxiv.org/abs/2005.10213), one model per language.
+```bash
+$ bash baselines/neural/example/sigmorphon2021-shared-tasks/task0-launch.sh
+```
+
+
 
 ### Organizers
 **Task Logistics**: Tiago Pimentel, Brian Leonard, Eleanor Chodroff,  Maria Ryskina, Sabrina Mielke, Garrett Nicolai, Yustinus Ghanggo Ate, Francis Tyers, Edoardo M. Ponti, Niklas Stoehr, Ritesh Kumar, Kairit Sirts, Zoey Liu, Mans Hulden, David Yarowsky, Ryan Cotterell, Ekaterina Vylomova, Ben Ambridge

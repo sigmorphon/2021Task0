@@ -1,0 +1,3 @@
+[submodule "baselines/neural"]
+	path = baselines/neural
+	url = https://github.com/tpimentelms/neural-transducer
