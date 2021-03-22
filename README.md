@@ -160,7 +160,7 @@ In many cases, there is arguably more than one “correct” way to inflect thes
 * ***February 25, 2021***: Training data for English, German, Portuguese and Russian are released. In contrast to previous year’s shared tasks, the data are in IPA. We invite participants to report errors.
 * ***March 8, 2021***: Neural and non-neural baselines for development languages released.
 * ***May 1, 2021***: Development data for nonce inflections are released. (This includes human judgements.)
-* ***May 23, 2021***: Test data for the nonce inflections are released. (This includes human judgements.)
+* ***May 23, 2021***: Test data for the nonce inflections are released. (This excludes human judgements.)
 * ***June 1, 2021***: Users submit their system output.
 * ***June 7, 2021***: Users submit their system description paper. 
 
