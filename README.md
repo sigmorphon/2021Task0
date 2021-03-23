@@ -209,6 +209,7 @@ where the fifth column is the log-probability under the participant's model. The
 * Sabrina Mielke (Johns Hopkins University)
 * Coleman Haley (Johns Hopkins University)
 * Eleanor Chodroff (University of York)
+* Johann-Mattis List (Max Planck Institute)
 * Ryan Cotterell (ETH Zürich)
 * Ekaterina Vylomova (University of Melbourne)
 * Ben Ambridge (University of Liverpool)
