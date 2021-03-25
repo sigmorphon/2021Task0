@@ -196,7 +196,7 @@ The training data are attested inflections in English, German, Portuguese and Ru
 </div>
 
 
-In contrast to the example above, the words are encoded in the [International Phonetic Alphabet (IPA)](https://en.wikipedia.org/wiki/International_Phonetic_Alphabet) not in the standard orthography for the given language.
+In contrast to the example above, the words are encoded in the [International Phonetic Alphabet (IPA)](https://en.wikipedia.org/wiki/International_Phonetic_Alphabet) not in the standard orthography for the given language. This is true for the training, development and test data, even though we present examples here in standard orthography.
 
 The **development** and **test data** are in a different format. They are quadruples
 
