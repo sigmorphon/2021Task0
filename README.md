@@ -198,7 +198,7 @@ The training data are attested inflections in English, German, Portuguese and Ru
 
 In contrast to the example above, the words are encoded in the [International Phonetic Alphabet (IPA)](https://en.wikipedia.org/wiki/International_Phonetic_Alphabet) not in the standard orthography for the given language. This is true for the training, development and test data, even though we present examples here in standard orthography.
 
-The **development** and **test data** are in a different format. They are quadruples
+The **development data** are in a different format. They are quadruples
 
 ````
 flink  flinked  V;PST   3.2
@@ -206,19 +206,26 @@ flink  flank    V;PST   4.1
 flink  flunk    V;PST   1.5
 ````
 
-where the fourth column is a native-speaker rating on a [Likert scale](https://en.wikipedia.org/wiki/Likert_scale). As stated above, these rankings were given by native speakers on Amazon’s Mechanical Turk.
+where the fourth column is a native-speaker rating on a [Likert scale](https://en.wikipedia.org/wiki/Likert_scale). As stated above, these rankings were given by native speakers on Amazon’s
 
 The task will be evaluated in the following manner. Having trained a model on the training data, the participants are asked to provide model scores for each inflection of the novel word. For instance, if the model is probabilistic (which is not a requirement!), the participants could provide the log-probability of each inflection under their model as the score. To use the example given above, the particpants could provide log p(flinked | flink, V;V.PTCP;PRS), log p(flank | flink, V;V.PTCP;PRS) and log p(flunk | flink, V;V.PTCP;PRS).
 For each wug lemma, e.g. "flink", a micro-correlation is computed using ([Spearman's ρ](https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient)) between the human judgements and the provided model scores. Then, a macro-average is computed by arithmetically averaging the micro-correlations. Systems will be ranked by the final macro-average.
 
-As an evaluation example, consider the following hypothetical submitted system output:
+As an evaluation example, consider the following potential **test entries**:
+````
+flink  flinked  V;PST
+flink  flank    V;PST
+flink  flunk    V;PST
+````
+
+An hypothetical submitted system output would be:
 
 ````
-flink  flinked  V;PST   3.2   -0.87
-flink  flank    V;PST   4.1   -0.92
-flink  flunk    V;PST   1.5   -6.21
+flink  flinked  V;PST   -0.87
+flink  flank    V;PST   -0.92
+flink  flunk    V;PST   -6.21
 ````
-where the fifth column is the log-probability under the participant's model. The micro-correlation here is ρ=0.5. These per-paradigm micro-correlations would then be arithmetically averaged to produce the final macro-average. The organizers will release an evaluation script for system evaluation along with the development data, which is the first data release where there are human judgements in the TSV.
+where the foruth column is the log-probability under the participant's model. The micro-correlation here is ρ=0.5. These per-paradigm micro-correlations would then be arithmetically averaged to produce the final macro-average. The organizers will release an evaluation script for system evaluation along with the development data, which is the first data release where there are human judgements in the TSV.
 
 
 ### Organizers
