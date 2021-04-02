@@ -186,7 +186,9 @@ In many cases, there is arguably more than one “correct” way to inflect thes
 
 ### Data and Evaluation
 
-The training data are attested inflections in English, German, Portuguese and Russian. You may download them [here](https://github.com/sigmorphon/2021Task0/tree/main/part2). The data are in the standard UniMorph triple file format:
+The training data are attested inflections in English, German, Dutch and Russian. You may download them [here](https://github.com/sigmorphon/2021Task0/tree/main/part2). We have also released development sets so all of participants tune their models on the same data. At evaluation time we will release test sets of attested words so we correlate quality of the trained inflectors with performance on the wug data. 
+
+The data are in the standard UniMorph triple file format:
 
 
 <div class="language-plaintext highlighter-rouge">
