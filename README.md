@@ -165,7 +165,7 @@ Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A., Kaise
 An open question in the use of neural networks for the study of language is to what degree they resemble humans in how they generate language. In the realm of morphology, this question goes back 40 years to the infamous past-tense debate of the 1980s where one camp argued humans use rule-based mechanisms and another argued that humans inflect words with a process closer to neural networks. See Gary Marcus’ book [The Algebraic Mind](https://mitpress.mit.edu/books/algebraic-mind) for an overview or several recent papers in the ACL community on the topic, e.g. [Kirov and Cotterell (2018)](https://arxiv.org/abs/1807.04783), [Corkery et al. (2019)](https://arxiv.org/abs/1906.01280) and [McCurdy et al. (2020)](https://www.aclweb.org/anthology/2020.acl-main.159/).
 
 
-This shared task adopts the experimental paradigm introduced by [Albright and Hayes (2003)](https://linguistics.ucla.edu/people/hayes/papers/AlbrightHayes2003RulesVsAnalogy.pdf). We have created a large number of new nonce words in four languages: English, German, Portuguese and Russian. To the best of our knowledge, this will be the largest and most multilingual collection of nonce words in existence. The goal of the participants in the shared task is to design a model that morphologically inflects the nonce words according to the grammar of the given languages. As an example, consider the following nonce verbs that obey English phonotactics:
+This shared task adopts the experimental paradigm introduced by [Albright and Hayes (2003)](https://linguistics.ucla.edu/people/hayes/papers/AlbrightHayes2003RulesVsAnalogy.pdf). We have created a large number of new nonce words in four languages: English, German, Dutch and Russian. To the best of our knowledge, this will be the largest and most multilingual collection of nonce words in existence. The goal of the participants in the shared task is to design a model that morphologically inflects the nonce words according to the grammar of the given languages. As an example, consider the following nonce verbs that obey English phonotactics:
 
 + blad /blæd/
 + crast /kɹæst/
@@ -177,7 +177,7 @@ In many cases, there is arguably more than one “correct” way to inflect thes
 
 ### Timeline
 
-* ***February 25, 2021***: Training data for English, German, Portuguese and Russian are released. In contrast to previous year’s shared tasks, the data are in IPA. We invite participants to report errors.
+* ***February 25, 2021***: Training data for English, German, ~~Portuguese~~ Dutch and Russian are released. In contrast to previous year’s shared tasks, the data are in IPA. We invite participants to report errors.
 * ***March 8, 2021***: Neural and non-neural baselines for development languages released.
 * ***May 1, 2021***: Development data for nonce inflections are released. (This includes human judgements.)
 * ***May 23, 2021***: Test data for the nonce inflections are released. (This excludes human judgements.)
@@ -186,7 +186,7 @@ In many cases, there is arguably more than one “correct” way to inflect thes
 
 ### Data and Evaluation
 
-The training data are attested inflections in English, German, Dutch and Russian. You may download them [here](https://github.com/sigmorphon/2021Task0/tree/main/part2). We have also released development sets so all of participants tune their models on the same data. At evaluation time we will release test sets of attested words so we correlate quality of the trained inflectors with performance on the wug data. 
+The training data are attested inflections in English, German, Dutch and Russian. You may download them [here](https://github.com/sigmorphon/2021Task0/tree/main/part2). We have also released development sets so all of participants tune their models on the same data. At evaluation time we will release test sets of attested words so we correlate quality of the trained inflectors with performance on the wug data.
 
 The data are in the standard UniMorph triple file format:
 
