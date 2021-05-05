@@ -1,4 +1,4 @@
-pid	list	item	num	condition	past_rating	lemma_rating	isreal																lemma	form
+pid	list	item	num	condition	past_rating	lemma_rating	isreal	lemma	form
 1	5	25	89	1	0	0	0	kriːv	kriːvd
 1	5	88	70	2	0.02	4.43	0	sɪnd	sɪnt
 1	5	133	63	1	0	0.06	0	krɪŋ	krʌŋ
