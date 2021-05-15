@@ -116,6 +116,10 @@ We will simultaneously evaluate the accuracy on held-out forms for languages fro
 
 The human-like generalization part of this shared task will be evaluated based on a morphological inflection system's output correlation with both human plausibility scores and production probabilities. These outputs will be evaluated at multiple data glanuralities. They will be separately evaluated based on wugs which are similar to regular existing words, similar to irregulars, to both, or to neither.
 
+### Submission Instructions 
+
+Please submit your team's results to ryan.cotterell@gmail.com CCing your team mates by June 1st, 2021. 
+
 
 ### Baselines
 
