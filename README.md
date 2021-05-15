@@ -244,7 +244,7 @@ where the foruth column is the log-probability under the participant's model. Th
 * Eleanor Chodroff (University of York)
 * Johann-Mattis List (Max Planck Institute)
 * Adina Williams (Facebook AI Research)
-* Ryan Cotterell (ETH Zürich)
+* Ryan Cotterell (ETH Zürich; primary contact)
 * Ekaterina Vylomova (University of Melbourne)
 * Ben Ambridge (University of Liverpool)
 
