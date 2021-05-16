@@ -73,6 +73,14 @@ In the ***Evaluation Phase***, the participants’ models will be evaluated on h
 | Livvi | Uralic | olo | https://github.com/unimorph/olo | Andrew and Natalia Krizhanovsky |
 
 
+#### Surprise Languages
+
+| Language | Family| code | UM | Annotators  |
+|---|---|---|---|---|
+|Turkish |Turkic | tur  | https://github.com/unimorph/tur/  | Omer Goldman  |
+|Xibe |Tungusic | sjo  | https://github.com/unimorph/sjo/  | Elena Klyachko  |
+|Võro |Uralic| vro  | https://github.com/unimorph/vro/  | Ekaterina Vylomova  |
+
 ### Timeline
 
 
@@ -82,17 +90,15 @@ In the ***Evaluation Phase***, the participants’ models will be evaluated on h
 * ***March 7, 2021***: Development language data are frozen.
 
 **Stage 2: Generalization Phase**
-* ***~~April 20~~ May 4, 2021***: Training and development splits for surprise languages released.
+* ***~~April 20~~ May 16, 2021***: Training and development splits for surprise languages released.
 (This is not a zero-shot learning task. Participants will be given training data for all languages.)
 
 **Stage 3: Evaluation Phase**
-* ***~~April 27~~ May 11, 2021***: Test splits for all languages (both development and surprise) released.
-* ***~~May 4~~ May 18, 2021***: Participants submit test predictions on all languages.
+* ***~~April 27~~ May 16, 2021***: Test splits for all languages (both development and surprise) released.
+* ***~~May 4~~ May 23, 2021***: Participants submit test predictions on all languages.
 
 **Stage 4: Write-up Phase**
-* ***June 1, 2021***: Participants’ system description papers due.
-* ***June 7, 2021***: Participants’ system description papers camera ready due.
-
+* ***June 7, 2021***: Participants’ system description papers due.
 
 ### Data
 
