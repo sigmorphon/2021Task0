@@ -77,7 +77,7 @@ In the ***Evaluation Phase***, the participants’ models will be evaluated on h
 
 | Language | Family| code | UM | Annotators  |
 |---|---|---|---|---|
-|Turkish |Turkic | tur  | https://github.com/unimorph/tur/  | Omer Goldman  |
+|Turkish |Turkic | tur  | https://github.com/unimorph/tur/  | Omer Goldman and Duygu Ataman |
 |Xibe |Tungusic | sjo  | https://github.com/unimorph/sjo/  | Elena Klyachko  |
 |Võro |Uralic| vro  | https://github.com/unimorph/vro/  | Ekaterina Vylomova  |
 
