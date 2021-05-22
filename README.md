@@ -125,7 +125,7 @@ The human-like generalization part of this shared task will be evaluated based o
 
 ### Submission Instructions 
 
-Please submit your team's results to ryan.cotterell@gmail.com CCing your team mates by June 1st, 2021. 
+Please submit your team's results to ryan.cotterell@gmail.com CCing your team mates by May 23rd, 2021. 
 
 
 ### Baselines
@@ -239,6 +239,10 @@ flink  flank    V;PST   -0.92
 flink  flunk    V;PST   -6.21
 ````
 where the foruth column is the log-probability under the participant's model. The micro-correlation here is ρ=0.5. These per-paradigm micro-correlations would then be arithmetically averaged to produce the final macro-average. The organizers will release an evaluation script for system evaluation along with the development data, which is the first data release where there are human judgements in the TSV.
+
+### Submission Instructions 
+
+Please submit your team's results to ryan.cotterell@gmail.com CCing your team mates by June 1st, 2021. 
 
 
 ### Organizers
