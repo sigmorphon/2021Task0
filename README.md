@@ -283,5 +283,5 @@ Wu, S., Cotterell, R., and Hulden, M. (2021). [Applying the Transformer to Chara
 
 ## Participation Policy
 
-We do not tolerate harassment in our shared task. Anyone who has been previously found to have harassed, stalked or abused one of the organizers cannot participate in our task in any capacity. There are too few organizers for us to accomodate the harasser in a manner that ensures the safety of their victims. (This policy was written on June 22nd and cannot be applied retroactively, but will be in place for all future iterations of work.)
+We do not tolerate harassment in our shared task. Anyone who has been previously found to have harassed one of the organizers cannot participate in our task in any capacity. There are too few organizers for us to accomodate the harasser in a manner that ensures the safety of their victims. (This policy was written on June 22nd and cannot be applied retroactively, but will be in place for all future iterations of work.)
 
