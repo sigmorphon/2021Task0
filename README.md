@@ -283,5 +283,5 @@ Wu, S., Cotterell, R., and Hulden, M. (2021). [Applying the Transformer to Chara
 
 ## Participation Policy
 
-Harassers have no place in science. Anyone who has been found to have harassed, stalked or abused one of the organizers cannot participate in our task in any capacity. This is not intended to be punitive: There are simply too few organizers for it to be reasonable to expect us to accomodate the harasser in a manner that ensures the safety of their victims. Every team is responsible for ensuring their own compliance with the policy. This policy was written on June 22nd and cannot be applied retroactively, but will be in place for all future iterations of work. 
+We do not tolerate harassment in our shared task. Anyone who has been previously found to have harassed, stalked or abused one of the organizers cannot participate in our task in any capacity. This is not intended to be punitive: There are simply too few organizers for it to be reasonable to expect us to accomodate the harasser in a manner that ensures the safety of their victims. Every team is responsible for ensuring their own compliance with the policy. This policy was written on June 22nd and cannot be applied retroactively, but will be in place for all future iterations of work. 
 
