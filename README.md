@@ -153,7 +153,7 @@ Then, to run the transducer [(Wu et al, 2021)](https://arxiv.org/abs/2005.10213)
 $ bash baselines/neural/example/sigmorphon2021-shared-tasks/task0-launch.sh
 ```
 
-**Baseline Results** : [https://docs.google.com/spreadsheets/d/1n91nUeV72-sGKyQr6-iSO3u39E1Ho9LHSfeYAf7HYxY/edit?usp=sharing] (https://docs.google.com/spreadsheets/d/1n91nUeV72-sGKyQr6-iSO3u39E1Ho9LHSfeYAf7HYxY/edit?usp=sharing)
+**Baseline Results** : https://docs.google.com/spreadsheets/d/1n91nUeV72-sGKyQr6-iSO3u39E1Ho9LHSfeYAf7HYxY/edit?usp=sharing
 
 
 ### Organizers
